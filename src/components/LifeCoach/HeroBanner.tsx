@@ -1,5 +1,6 @@
 "use client";
 
+import { withBasePath } from "@/lib/basePath";
 import React from "react";
 import Link from "next/link";
 import Partner from "./Partner";
@@ -13,7 +14,7 @@ const HeroBanner: React.FC = () => {
       <div
         className="pt-[50px] pb-[50px] md:pb-[0] bg-cover md:bg-bottom"
         style={{
-          backgroundImage: `url(/images/life-coach/hero-banner-bg.png)`,
+          backgroundImage: `url(${withBasePath("/images/life-coach/hero-banner-bg.png")})`,
         }}
       >
         <div className="container mx-auto max-w-[1550px]">

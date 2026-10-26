@@ -1,5 +1,6 @@
 "use client";
 
+import { withBasePath } from "@/lib/basePath";
 import React from "react";
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ const PopularNews: React.FC = () => {
           <div className="flex items-center space-x-[15px] rtl:space-x-reverse">
             <div
               className="shrink-0 bg-cover bg-center h-[90px] w-[90px]"
-              style={{ backgroundImage: `url(/images/blog-large-img1.jpg)` }}
+              style={{ backgroundImage: `url(${withBasePath("/images/blog-large-img1.jpg")})` }}
             ></div>
             <div>
               <h3 className="leading-[1.2] text-[16px] md:text-[18px] lg:text-[16px] xl:text-[18px] mb-[5px]">
@@ -33,7 +34,7 @@ const PopularNews: React.FC = () => {
           <div className="flex items-center space-x-[15px] rtl:space-x-reverse">
             <div
               className="shrink-0 bg-cover bg-center h-[90px] w-[90px]"
-              style={{ backgroundImage: `url(/images/blog-large-img2.jpg)` }}
+              style={{ backgroundImage: `url(${withBasePath("/images/blog-large-img2.jpg")})` }}
             ></div>
             <div>
               <h3 className="leading-[1.2] text-[16px] md:text-[18px] lg:text-[16px] xl:text-[18px] mb-[5px]">
@@ -51,7 +52,7 @@ const PopularNews: React.FC = () => {
           <div className="flex items-center space-x-[15px] rtl:space-x-reverse">
             <div
               className="shrink-0 bg-cover bg-center h-[90px] w-[90px]"
-              style={{ backgroundImage: `url(/images/blog-large-img3.jpg)` }}
+              style={{ backgroundImage: `url(${withBasePath("/images/blog-large-img3.jpg")})` }}
             ></div>
             <div>
               <h3 className="leading-[1.2] text-[16px] md:text-[18px] lg:text-[16px] xl:text-[18px] mb-[5px]">

@@ -1,5 +1,6 @@
 "use client";
 
+import { withBasePath } from "@/lib/basePath";
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Link from "next/link";
@@ -24,7 +25,7 @@ const HeroBanner: React.FC = () => {
       
       <div
         className="pt-[50px] md:pt-[60px] lg:pt-[90px] bg-cover bg-bottom"
-        style={{ backgroundImage: `url(/images/online-training-coach/banner-bg.png)` }}
+        style={{ backgroundImage: `url(${withBasePath("/images/online-training-coach/banner-bg.png")})` }}
       >
         <div className="container mx-auto max-w-[1570px]">
           <div className="md:flex items-center justify-between text-center md:text-left rtl:text-right space-y-[30px] md:space-y-[0] md:space-x-[50px] xl:space-x-[100px] rtl:space-x-reverse mb-[30px] md:mb-[40px] lg:mb-[70px]">

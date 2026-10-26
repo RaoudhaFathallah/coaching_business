@@ -1,5 +1,6 @@
 "use client";
 
+import { withBasePath } from "@/lib/basePath";
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import FunFacts from "./FunFacts";
@@ -20,7 +21,7 @@ const PromoVideo: React.FC = () => {
 
       <div
         className="relative h-[500px] md:h-[700px] xl:h-[825px] bg-cover bg-center"
-        style={{ backgroundImage: `url(/images/promo-video-thumb.jpg)` }}
+        style={{ backgroundImage: `url(${withBasePath("/images/promo-video-thumb.jpg")})` }}
       >
         <div
           className="bg-[#717FF8] w-[100px] md:w-[145px] h-[100px] md:h-[145px] leading-[100px] md:leading-[145px] text-center rounded-full text-white text-[60px] md:text-[70px] absolute top-1/2 -translate-y-2/4 -mt-[80px] md:-mt-[100px] left-0 right-0 mx-auto cursor-pointer transition duration-500 ease-in-out hover:bg-[#CD201F]"

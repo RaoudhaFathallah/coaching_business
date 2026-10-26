@@ -37,6 +37,9 @@ jobs:
 
       - name: Build static site
         run: npm run build
+        env:
+          # Project site served from https://<user>.github.io/coaching_business/
+          NEXT_PUBLIC_BASE_PATH: /coaching_business
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

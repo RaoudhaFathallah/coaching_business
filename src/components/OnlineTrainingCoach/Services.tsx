@@ -1,5 +1,6 @@
 "use client";
 
+import { withBasePath } from "@/lib/basePath";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -84,7 +85,7 @@ const Services: React.FC = () => {
             <div
               className="relative h-[400px] md:h-[458px] lg:h-[435px] xl:h-[526px] px-[25px] md:px-[40px] lg:px-[30px] xl:px-[40px] py-[25px] md:py-[40px] bg-cover bg-center before:content[''] before:absolute before:bg-[#051F0DBF] before:top-0 before:left-0 before:w-full before:h-full"
               style={{
-                backgroundImage: `url(/images/online-training-coach/service2.jpg)`,
+                backgroundImage: `url(${withBasePath("/images/online-training-coach/service2.jpg")})`,
               }}
             >
               <h3 className="relative text-white font-semibold text-[20px] md:text-[25px] lg:text-[25px] xl:text-[30px] leading-[1.2] ">
