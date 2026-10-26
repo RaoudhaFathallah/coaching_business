@@ -1,0 +1,524 @@
+{
+  "common": {
+    "home": "Home",
+    "aboutMe": "About Me",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "bookFreeCall": "Book a Free Call",
+    "learnMore": "Learn More",
+    "moreSupport": "More support",
+    "customPricing": "Custom pricing",
+    "yourGoalsYourPace": "Your goals. Your pace.",
+    "aLittleAboutMe": "A little about me"
+  },
+  "nav": {
+    "about": "About",
+    "programs": "Coaching / Programs",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "topHeader": {
+    "workingHours": "Working Hours :",
+    "schedule": "Discovery calls: Mon–Fri 8–8:30pm · Sat–Sun 2–4:45pm and 8–8:30pm"
+  },
+  "newsletter": {
+    "title": "Get my tips directly into your inbox.",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe Now"
+  },
+  "footer": {
+    "followOn": "Follow On:",
+    "exploreMore": "Explore More",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Condition",
+    "becomeOnlineTeacher": "Become Online Teacher",
+    "studentProfile": "Student Profile",
+    "myAccount": "My account",
+    "onlineCourses": "Online Courses",
+    "languagesClasses": "Languages Classes",
+    "photographyOnline": "Photography Online",
+    "communicationSkills": "Communication Skills",
+    "designSkills": "Design Skills",
+    "businessMarketing": "Business Marketing",
+    "productDesign": "Product Design",
+    "quickLinks": "Quick Links",
+    "homePage": "Home Page",
+    "allCourses": "All Courses",
+    "events": "Events",
+    "teamMember": "Team Member",
+    "contactUs": "Contact Us",
+    "aboutUs": "About Us",
+    "helpSupport": "Help & support",
+    "register": "Register",
+    "login": "Login",
+    "faqPage": "FAQ’s Page",
+    "onlineSupport": "Online Support",
+    "blog": "Blog",
+    "copyright": "© coaching. All Rights Reserved by "
+  },
+  "home": {
+    "hero": {
+      "badge": "Coaching that starts with you",
+      "title": "Personalized coaching to help you reach your goals.",
+      "description": "Discover a coaching experience tailored to your goals, challenges and personal growth.",
+      "exploreCoaching": "Explore Coaching",
+      "starsLabel": "5 out of 5 stars",
+      "support": "Support for your next step",
+      "imageAlt": "Your life coach, ready to listen",
+      "cardSubtitle": "A space to move forward"
+    },
+    "benefitsLabel": "Coaching benefits",
+    "benefits": [
+      {
+        "title": "Personalized coaching",
+        "description": "A thoughtful approach shaped around you and your goals."
+      },
+      {
+        "title": "Flexible sessions",
+        "description": "Find a rhythm that fits your schedule and your life."
+      },
+      {
+        "title": "Goal driven",
+        "description": "Turn what matters to you into clear, achievable steps."
+      },
+      {
+        "title": "Online coaching",
+        "description": "Meet from wherever you feel most comfortable."
+      }
+    ],
+    "about": {
+      "imageAlt": "A coach listening during a one-to-one session",
+      "cardTitle": "A thoughtful space to grow",
+      "cardSubtitle": "One conversation at a time",
+      "title": "Real progress begins with being heard.",
+      "paragraph1": "I believe meaningful change starts with a conversation where you can pause, reflect and make sense of what you want next.",
+      "paragraph2": "My coaching is collaborative and practical. We work with your strengths, explore the challenges in front of you and find steps that feel achievable in your everyday life."
+    },
+    "programs": {
+      "eyebrow": "Ways we can work together",
+      "title": "Coaching programs for your next chapter",
+      "description": "Whether you are looking for a fresh perspective or a clear next step, we can focus on what matters to you.",
+      "items": [
+        {
+          "title": "Personal Growth",
+          "description": "Build self-awareness, confidence, and habits that help you move forward."
+        },
+        {
+          "title": "Career Development",
+          "description": "Navigate a career change, find direction, or take your next step at work."
+        },
+        {
+          "title": "Life Balance",
+          "description": "Make room for what matters and create a more sustainable everyday life."
+        },
+        {
+          "title": "Leadership",
+          "description": "Grow your leadership approach with greater clarity and confidence."
+        }
+      ],
+      "ctaTitle": "Not sure which program is right for you?",
+      "ctaDescription": "Book a free discovery call and find the best fit for your goals."
+    },
+    "process": {
+      "eyebrow": "Simple and supportive",
+      "title": "How it works",
+      "description": "A clear, considered process—with you involved at every step.",
+      "steps": [
+        {
+          "title": "Book a call",
+          "description": "Start with a relaxed, no-pressure conversation about your goals."
+        },
+        {
+          "title": "Get to know you",
+          "description": "We explore where you are now and what you would like to change."
+        },
+        {
+          "title": "Create your plan",
+          "description": "Together, we map out a practical path that feels right for you."
+        },
+        {
+          "title": "Start your sessions",
+          "description": "Put your plan into action, with support and space to reflect."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Choose your starting point",
+      "title": "Coaching that fits your goals",
+      "description": "We'll talk through the options together and find a level of support that works for you.",
+      "plans": [
+        {
+          "name": "Standard",
+          "description": "A focused start for one goal or challenge.",
+          "features": [
+            "One-to-one coaching",
+            "Personal goal setting",
+            "Flexible online sessions"
+          ]
+        },
+        {
+          "name": "Premium",
+          "description": "Ongoing support for deeper, sustained progress.",
+          "features": [
+            "Everything in Standard",
+            "Continued accountability",
+            "A plan shaped around your pace"
+          ]
+        }
+      ],
+      "discussedDuringCall": "Discussed during your free call",
+      "discussPlan": "Discuss this plan"
+    },
+    "testimonials": {
+      "eyebrow": "Client experiences",
+      "title": "Every coaching journey is personal",
+      "description": "Client stories will be shared here when approved feedback is available.",
+      "placeholder": "Until then, you’re welcome to learn more about the coaching approach or get in touch to talk about what you’re looking for.",
+      "visitStories": "Visit client stories"
+    },
+    "faq": {
+      "eyebrow": "Good to know",
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "How does the coaching process work?",
+          "answer": "We begin with a free conversation about your goals. If we decide to work together, we agree on a focus and a pace that feels useful for you."
+        },
+        {
+          "question": "How long is a coaching session?",
+          "answer": "Session length can be agreed together when we discuss the right coaching plan for you."
+        },
+        {
+          "question": "Who is coaching for?",
+          "answer": "Coaching can support anyone who wants space to reflect, work through a challenge, or make progress towards a personal or professional goal."
+        },
+        {
+          "question": "Can sessions be done online?",
+          "answer": "Yes. Sessions can take place online, so you can join from a place that works for you."
+        },
+        {
+          "question": "How do I book a first call?",
+          "answer": "Use any of the “Book a Free Call” buttons to choose a preferred time and send a booking request."
+        }
+      ],
+      "stillQuestion": "Still have a question?",
+      "visitFaq": "Visit the FAQ page"
+    },
+    "cta": {
+      "eyebrow": "Your next chapter starts here",
+      "title": "Ready to start your coaching journey?",
+      "description": "Book your free assessment call and take the first step toward your goals."
+    }
+  },
+  "aboutMe": {
+    "hero": {
+      "title": "Coaching that begins with you.",
+      "paragraph1": "I believe that meaningful change begins when you have the time and space to hear yourself think. Coaching gives us a chance to pause, get curious, and find a way forward that feels like your own.",
+      "paragraph2": "Whether you are navigating a change, feeling stuck, or ready to grow, our conversations focus on what matters to you—not a one-size-fits-all answer.",
+      "imageAlt": "Life coach portrait",
+      "caption": "A thoughtful space to move forward"
+    },
+    "philosophy": {
+      "imageAlt": "A calm, welcoming coaching space",
+      "cardTitle": "There is no single right way to grow.",
+      "cardSubtitle": "We make room for your perspective and your pace.",
+      "eyebrow": "My philosophy",
+      "title": "You already bring strengths to the work.",
+      "paragraph1": "Coaching is a partnership. I bring attentive questions, a supportive structure, and a fresh perspective; you bring the knowledge of your own life.",
+      "paragraph2": "We can look at what is getting in the way, notice what is already working, and explore options without rushing to a perfect answer. The aim is to help you make choices that feel considered and genuinely yours."
+    },
+    "values": {
+      "eyebrow": "What you can expect",
+      "title": "A coaching relationship built around you.",
+      "description": "A steady, open process where your perspective leads and each conversation has room to make a difference.",
+      "items": [
+        {
+          "title": "A space to be heard",
+          "description": "Bring your questions, hopes, and challenges to a conversation grounded in care and curiosity."
+        },
+        {
+          "title": "Your goals, your way",
+          "description": "We start with what matters to you and shape the work around your own priorities."
+        },
+        {
+          "title": "Progress that feels practical",
+          "description": "Turn new insight into small, considered steps you can take in everyday life."
+        }
+      ]
+    },
+    "approach": {
+      "eyebrow": "Working together",
+      "title": "Thoughtful conversations. Practical next steps.",
+      "description": "We take the process one step at a time, with space to reflect along the way.",
+      "steps": [
+        {
+          "title": "We start with a conversation",
+          "description": "We make time to understand what brings you to coaching and what you hope will be different."
+        },
+        {
+          "title": "We find your focus",
+          "description": "Together, we clarify a direction that feels meaningful and choose a pace that works for you."
+        },
+        {
+          "title": "We take the next step",
+          "description": "Each session offers space to reflect, explore options, and decide what you want to try next."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Take the first step",
+      "title": "Let’s talk about what matters to you.",
+      "description": "Book a free introductory call to share what you are looking for and see whether coaching feels like the right next step."
+    }
+  },
+  "courses": {
+    "title": "Coaching Programs",
+    "hero": {
+      "eyebrow": "Find your way forward",
+      "title": "Coaching shaped around what matters to you.",
+      "description": "There is no one-size-fits-all path. Explore the areas we can work on together, then we’ll shape the conversations around your goals, your circumstances, and your pace.",
+      "imageAlt": "A coaching session",
+      "cardSubtitle": "A partnership, not a prescription."
+    },
+    "programs": {
+      "eyebrow": "Explore the programs",
+      "title": "A focus for every next step.",
+      "description": "Choose a starting point. We’ll tailor the work to you during a free introductory conversation.",
+      "items": [
+        {
+          "title": "Personal Growth",
+          "description": "Build self-awareness, confidence, and habits that help you move forward with intention.",
+          "focus": ["Confidence and self-belief", "Personal goals", "Creating lasting habits"]
+        },
+        {
+          "title": "Career & Purpose",
+          "description": "Find clarity in your working life, navigate change, and choose a meaningful next step.",
+          "focus": ["Career direction", "Transitions and decisions", "Workplace confidence"]
+        },
+        {
+          "title": "Life Balance",
+          "description": "Reconnect with what matters and make space for a more balanced, sustainable everyday life.",
+          "focus": ["Boundaries and priorities", "Managing change", "Everyday wellbeing"]
+        },
+        {
+          "title": "Leadership",
+          "description": "Develop a leadership approach that feels grounded, clear, and true to your values.",
+          "focus": ["Leadership confidence", "Communication", "Leading through change"]
+        }
+      ],
+      "learnMoreAbout": "Learn more about",
+      "focusLabel": "We can focus on",
+      "explore": "Explore this program"
+    },
+    "process": {
+      "eyebrow": "A simple beginning",
+      "title": "What happens when we work together?",
+      "description": "We begin with a conversation, get clear on what you want, and take the next steps together.",
+      "steps": [
+        {
+          "title": "Talk it through",
+          "description": "Share what brings you here in a free, no-pressure call."
+        },
+        {
+          "title": "Find your focus",
+          "description": "Choose an area to work on and agree a pace that feels right."
+        },
+        {
+          "title": "Move forward",
+          "description": "Use each session to reflect, make choices, and take practical steps."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Not sure where to start?",
+      "title": "Let’s find the right focus for you.",
+      "description": "Book a free introductory call. We can talk through what you’re looking for and whether coaching is a good fit."
+    }
+  },
+  "howItWorks": {
+    "intro": {
+      "eyebrow": "A clear, collaborative process",
+      "title": "One conversation, then one step at a time.",
+      "description": "Coaching is shaped with you. We get clear on what matters, agree on a direction, and adapt our conversations to your situation."
+    },
+    "steps": [
+      {
+        "title": "Book a discovery call",
+        "description": "We start with a free, no-pressure conversation. Share what brings you here and ask anything you would like to know."
+      },
+      {
+        "title": "Take stock together",
+        "description": "We make space to understand your current situation, the strengths you bring, and what you would like to change."
+      },
+      {
+        "title": "Set a personal direction",
+        "description": "We agree on a focus and a pace that suit your priorities, so you know what to expect before getting started."
+      },
+      {
+        "title": "Move forward at your pace",
+        "description": "Sessions help you reflect, explore options, and turn new insights into practical next steps."
+      }
+    ],
+    "cta": {
+      "title": "You don’t need to have all the answers.",
+      "description": "The discovery call is simply a chance to see whether coaching and the way we work feel right for you."
+    }
+  },
+  "pricing": {
+    "intro": {
+      "eyebrow": "Support that fits",
+      "title": "Choose the level of support that feels right.",
+      "description": "Every coaching journey is different. Fees are tailored to your goals and the level of support you want; we’ll discuss them clearly before you make any commitment."
+    },
+    "plans": [
+      {
+        "name": "Standard",
+        "description": "Focused support for one goal or challenge.",
+        "features": [
+          "One-to-one coaching",
+          "Clarity on your goals",
+          "A pace agreed together",
+          "Online sessions available"
+        ]
+      },
+      {
+        "name": "Premium",
+        "description": "Ongoing support to help you make sustained progress.",
+        "features": [
+          "Everything in Standard",
+          "Regular check-ins between key milestones",
+          "A plan shaped around your pace",
+          "Space to reflect and adjust as you go"
+        ]
+      }
+    ],
+    "discussedDuringDiscoveryCall": "Discussed together during your free discovery call.",
+    "discussPlan": "Discuss this plan",
+    "cta": {
+      "title": "Would you like to learn more first?",
+      "description": "Your first call is free and comes with no obligation. We can discuss your goals, the options, and pricing."
+    }
+  },
+  "feedbacks": {
+    "title": "Client Stories",
+    "eyebrow": "Every journey is different",
+    "heading": "Coaching stories are coming soon.",
+    "description": "Coaching is personal. We’ll share genuine reflections here with permission from the people who give them. In the meantime, explore the coaching approach or let’s talk about your goals.",
+    "exploreProcess": "Explore the coaching process"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "eyebrow": "A good place to start",
+    "heading": "A few answers before we talk.",
+    "description": "Can’t find the answer you’re looking for? Get in touch and we can talk it through.",
+    "questions": [
+      {
+        "question": "How does the coaching process work?",
+        "answer": "We start with a free introductory call to understand what you are looking for. If coaching feels like a good fit, we agree on a focus and a pace together. Sessions give you space to reflect, explore options, and decide on practical next steps."
+      },
+      {
+        "question": "How long is a coaching session?",
+        "answer": "Session length depends on the format we agree together. We can discuss the options during your introductory call."
+      },
+      {
+        "question": "Who is coaching for?",
+        "answer": "Coaching can be useful if you want to work through a challenge, make a change, or move towards a personal or professional goal. You do not need to have everything figured out before we speak."
+      },
+      {
+        "question": "Can sessions be done online?",
+        "answer": "Yes. Online sessions are available, so you can take part from a place that works for you."
+      },
+      {
+        "question": "How do I book a first call?",
+        "answer": "Use the booking link to choose a preferred date and time, then send us your request by email."
+      },
+      {
+        "question": "What does coaching cost?",
+        "answer": "Coaching fees depend on the type and level of support you are looking for. We discuss the available options and costs before you decide whether to begin."
+      },
+      {
+        "question": "Is coaching the same as therapy?",
+        "answer": "Coaching focuses on reflection, goals, and forward-looking action. It is not a substitute for therapy or medical care. If you need clinical support, please contact a qualified healthcare professional."
+      }
+    ],
+    "askQuestion": "Ask a question"
+  },
+  "booking": {
+    "title": "Booking",
+    "appointmentTypes": {
+      "discovery": {
+        "title": "Free discovery call",
+        "description": "A first conversation about your goals."
+      },
+      "coaching": {
+        "title": "Coaching session",
+        "description": "One-to-one support for your next step."
+      },
+      "online": {
+        "title": "Online coaching",
+        "description": "Meet online from wherever suits you."
+      }
+    },
+    "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "notices": {
+      "chooseDateAndTime": "Please choose a date and time.",
+      "emailWillOpen": "Your email app will open with your request. The booking is confirmed after we reply."
+    },
+    "email": {
+      "subject": "Coaching booking request",
+      "name": "Name",
+      "appointmentType": "Appointment type",
+      "preferredDate": "Preferred date",
+      "preferredTime": "Preferred time",
+      "timeZone": "Time zone",
+      "notes": "Notes"
+    },
+    "labels": {
+      "email": "Email",
+      "duration": "Duration"
+    },
+    "intro": {
+      "eyebrow": "Your next step starts here",
+      "title": "Book Your Free Assessment Call",
+      "description": "Choose an appointment type, preferred date, and time. We’ll confirm availability with you by email."
+    },
+    "step1": {
+      "title": "Choose appointment type",
+      "description": "Select the format that suits you."
+    },
+    "step2": {
+      "title": "Select date",
+      "discoveryAvailability": "Available on weekdays and weekends.",
+      "weekendsUnavailable": "Weekends are not available.",
+      "previousMonth": "Previous month",
+      "nextMonth": "Next month"
+    },
+    "step3": {
+      "title": "Select time",
+      "description": "Your local time zone",
+      "chooseDateFirst": "Choose a date first to see the suggested times.",
+      "subjectToConfirmation": "Preferred time, subject to confirmation by email."
+    },
+    "step4": {
+      "title": "Your information",
+      "description": "So we can reply and confirm your time.",
+      "firstName": "First name",
+      "notes": "A little about your goals (optional)"
+    },
+    "submit": "Request this booking",
+    "disclaimer": "Your request is not automatically confirmed. Your email app will open so you can send the details; we’ll then confirm availability.",
+    "summary": {
+      "title": "Your booking",
+      "appointment": "Appointment",
+      "date": "Date",
+      "time": "Time",
+      "notSelected": "Not selected",
+      "price": "Price",
+      "free": "Free",
+      "toBeDiscussed": "To be discussed",
+      "confirmationNote": "Your appointment is confirmed only after we reply by email.",
+      "contactLink": "Have a question? Contact me"
+    }
+  }
+}

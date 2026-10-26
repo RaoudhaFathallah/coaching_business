@@ -1,0 +1,524 @@
+{
+  "common": {
+    "home": "Accueil",
+    "aboutMe": "À propos",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Tarifs",
+    "bookFreeCall": "Réserver un appel gratuit",
+    "learnMore": "En savoir plus",
+    "moreSupport": "Accompagnement renforcé",
+    "customPricing": "Tarif personnalisé",
+    "yourGoalsYourPace": "Vos objectifs. Votre rythme.",
+    "aLittleAboutMe": "Quelques mots sur moi"
+  },
+  "nav": {
+    "about": "À propos",
+    "programs": "Programmes",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "topHeader": {
+    "workingHours": "Horaires :",
+    "schedule": "Appels découverte : lun.–ven. 20 h–20 h 30 · sam.–dim. 14 h–16 h 45 et 20 h–20 h 30"
+  },
+  "newsletter": {
+    "title": "Recevez mes conseils directement dans votre boîte mail.",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "subscribe": "S’inscrire"
+  },
+  "footer": {
+    "followOn": "Suivez-moi :",
+    "exploreMore": "En savoir plus",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsConditions": "Conditions d’utilisation",
+    "becomeOnlineTeacher": "Devenir formateur en ligne",
+    "studentProfile": "Profil étudiant",
+    "myAccount": "Mon compte",
+    "onlineCourses": "Cours en ligne",
+    "languagesClasses": "Cours de langues",
+    "photographyOnline": "Photographie en ligne",
+    "communicationSkills": "Communication",
+    "designSkills": "Design",
+    "businessMarketing": "Marketing",
+    "productDesign": "Conception de produits",
+    "quickLinks": "Liens rapides",
+    "homePage": "Accueil",
+    "allCourses": "Tous les cours",
+    "events": "Événements",
+    "teamMember": "Équipe",
+    "contactUs": "Contact",
+    "aboutUs": "À propos de nous",
+    "helpSupport": "Aide et assistance",
+    "register": "S’inscrire",
+    "login": "Se connecter",
+    "faqPage": "Questions fréquentes",
+    "onlineSupport": "Assistance en ligne",
+    "blog": "Blog",
+    "copyright": "© coaching. Tous droits réservés. Site réalisé par "
+  },
+  "home": {
+    "hero": {
+      "badge": "Un accompagnement qui part de vous",
+      "title": "Un coaching personnalisé pour atteindre vos objectifs.",
+      "description": "Découvrez un accompagnement adapté à vos objectifs, vos défis et votre épanouissement personnel.",
+      "exploreCoaching": "Découvrir le coaching",
+      "starsLabel": "5 étoiles sur 5",
+      "support": "Un accompagnement pour votre prochain pas",
+      "imageAlt": "Votre coach, à votre écoute",
+      "cardSubtitle": "Un espace pour avancer"
+    },
+    "benefitsLabel": "Les avantages du coaching",
+    "benefits": [
+      {
+        "title": "Coaching personnalisé",
+        "description": "Une approche pensée autour de vous et de vos objectifs."
+      },
+      {
+        "title": "Séances flexibles",
+        "description": "Un rythme qui s’adapte à votre emploi du temps et à votre vie."
+      },
+      {
+        "title": "Orienté vers vos objectifs",
+        "description": "Transformez vos priorités en étapes claires et réalisables."
+      },
+      {
+        "title": "Coaching en ligne",
+        "description": "Échangez depuis l’endroit où vous vous sentez le mieux."
+      }
+    ],
+    "about": {
+      "imageAlt": "Une coach à l’écoute lors d’un échange individuel",
+      "cardTitle": "Un espace de réflexion et d’évolution",
+      "cardSubtitle": "Un échange à la fois",
+      "title": "Le progrès commence par une écoute attentive.",
+      "paragraph1": "Je crois que le changement commence par un échange qui vous permet de faire une pause, de réfléchir et de clarifier la suite.",
+      "paragraph2": "Mon approche est collaborative et concrète. Nous nous appuyons sur vos forces, explorons vos défis et définissons des étapes adaptées à votre quotidien."
+    },
+    "programs": {
+      "eyebrow": "Nos accompagnements",
+      "title": "Un accompagnement pour votre prochain chapitre",
+      "description": "Pour prendre du recul ou définir votre prochaine étape, nous nous concentrons sur ce qui compte pour vous.",
+      "items": [
+        {
+          "title": "Épanouissement personnel",
+          "description": "Développez votre confiance, votre connaissance de vous-même et des habitudes qui vous font avancer."
+        },
+        {
+          "title": "Évolution professionnelle",
+          "description": "Trouvez votre voie, préparez un changement ou franchissez une nouvelle étape au travail."
+        },
+        {
+          "title": "Équilibre de vie",
+          "description": "Faites de la place à l’essentiel et construisez un quotidien plus équilibré."
+        },
+        {
+          "title": "Leadership",
+          "description": "Développez votre leadership avec plus de clarté et de confiance."
+        }
+      ],
+      "ctaTitle": "Vous ne savez pas quel accompagnement choisir ?",
+      "ctaDescription": "Réservez un appel découverte gratuit pour trouver l’accompagnement qui vous convient."
+    },
+    "process": {
+      "eyebrow": "Un accompagnement à votre rythme",
+      "title": "Comment ça marche",
+      "description": "Un parcours clair et réfléchi, construit avec vous à chaque étape.",
+      "steps": [
+        {
+          "title": "Réserver un appel",
+          "description": "Commençons par un échange sans pression autour de vos objectifs."
+        },
+        {
+          "title": "Faire connaissance",
+          "description": "Nous explorons votre situation et ce que vous aimeriez faire évoluer."
+        },
+        {
+          "title": "Créer votre plan",
+          "description": "Ensemble, nous définissons un parcours concret qui vous correspond."
+        },
+        {
+          "title": "Commencer les séances",
+          "description": "Avancez avec un accompagnement et du temps pour réfléchir."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Choisissez votre point de départ",
+      "title": "Un accompagnement adapté à vos objectifs",
+      "description": "Échangeons sur les options et trouvons ensemble le niveau d’accompagnement qui vous convient.",
+      "plans": [
+        {
+          "name": "Standard",
+          "description": "Un accompagnement ciblé autour d’un objectif ou d’un défi.",
+          "features": [
+            "Coaching individuel",
+            "Définition de vos objectifs",
+            "Séances en ligne flexibles"
+          ]
+        },
+        {
+          "name": "Premium",
+          "description": "Un accompagnement continu pour avancer durablement.",
+          "features": [
+            "Tout le contenu de la formule Essentiel",
+            "Un suivi régulier",
+            "Un plan adapté à votre rythme"
+          ]
+        }
+      ],
+      "discussedDuringCall": "À définir lors de votre appel gratuit",
+      "discussPlan": "Parler de cette formule"
+    },
+    "testimonials": {
+      "eyebrow": "Témoignages",
+      "title": "Chaque parcours de coaching est personnel",
+      "description": "Les témoignages de clients seront publiés ici lorsque des retours autorisés seront disponibles.",
+      "placeholder": "En attendant, découvrez l’approche de coaching ou contactez-moi pour parler de vos attentes.",
+      "visitStories": "Consulter les témoignages"
+    },
+    "faq": {
+      "eyebrow": "À savoir",
+      "title": "Questions fréquentes",
+      "questions": [
+        {
+          "question": "Comment se déroule le coaching ?",
+          "answer": "Nous commençons par un échange gratuit autour de vos objectifs. Si nous décidons d’avancer ensemble, nous définissons un objectif et un rythme adaptés."
+        },
+        {
+          "question": "Combien de temps dure une séance ?",
+          "answer": "Nous pouvons convenir ensemble de la durée des séances lorsque nous discutons de la formule qui vous conviendrait."
+        },
+        {
+          "question": "À qui s’adresse le coaching ?",
+          "answer": "Le coaching s’adresse à toute personne qui souhaite prendre du recul, traverser une difficulté ou avancer vers un objectif personnel ou professionnel."
+        },
+        {
+          "question": "Les séances peuvent-elles se dérouler en ligne ?",
+          "answer": "Oui. Les séances peuvent avoir lieu en ligne, depuis l’endroit qui vous convient."
+        },
+        {
+          "question": "Comment réserver un premier appel ?",
+          "answer": "Utilisez l’un des boutons « Réserver un appel gratuit » pour nous contacter et convenir d’un moment."
+        }
+      ],
+      "stillQuestion": "Une autre question ?",
+      "visitFaq": "Consulter la FAQ"
+    },
+    "cta": {
+      "eyebrow": "Votre prochain chapitre commence ici",
+      "title": "Prêt·e à commencer votre parcours de coaching ?",
+      "description": "Réservez votre appel découverte gratuit et faites le premier pas vers vos objectifs."
+    }
+  },
+  "aboutMe": {
+    "hero": {
+      "title": "Un coaching qui commence par vous.",
+      "paragraph1": "Je crois que le changement véritable commence lorsque vous avez le temps et l’espace pour vous écouter. Le coaching vous invite à faire une pause, à explorer vos envies et à trouver votre propre voie.",
+      "paragraph2": "Que vous traversiez un changement, vous sentiez dans une impasse ou souhaitiez évoluer, nos échanges portent sur ce qui compte pour vous, sans réponse toute faite.",
+      "imageAlt": "Portrait de votre coach",
+      "caption": "Un espace de réflexion pour avancer"
+    },
+    "philosophy": {
+      "imageAlt": "Un espace de coaching calme et accueillant",
+      "cardTitle": "Il n’existe pas une seule façon d’évoluer.",
+      "cardSubtitle": "Nous respectons votre point de vue et votre rythme.",
+      "eyebrow": "Ma philosophie",
+      "title": "Vous avez déjà en vous des ressources précieuses.",
+      "paragraph1": "Le coaching est un partenariat. J’apporte une écoute attentive, un cadre bienveillant et un regard nouveau ; vous apportez votre connaissance de votre propre vie.",
+      "paragraph2": "Nous pouvons examiner ce qui vous freine, reconnaître ce qui fonctionne déjà et explorer des pistes sans nous précipiter vers une réponse parfaite. L’objectif : vous aider à faire des choix réfléchis qui vous ressemblent."
+    },
+    "values": {
+      "eyebrow": "À quoi vous attendre",
+      "title": "Un accompagnement pensé autour de vous.",
+      "description": "Un parcours ouvert et progressif, guidé par votre perspective, où chaque échange peut faire avancer les choses.",
+      "items": [
+        {
+          "title": "Un espace pour être écouté·e",
+          "description": "Apportez vos questions, vos espoirs et vos défis dans un échange fondé sur l’écoute et la curiosité."
+        },
+        {
+          "title": "Vos objectifs, à votre façon",
+          "description": "Nous partons de ce qui compte pour vous et adaptons l’accompagnement à vos priorités."
+        },
+        {
+          "title": "Des progrès concrets",
+          "description": "Transformez vos prises de conscience en petits pas réfléchis dans votre quotidien."
+        }
+      ]
+    },
+    "approach": {
+      "eyebrow": "Notre façon de travailler ensemble",
+      "title": "Des échanges réfléchis. Des prochaines étapes concrètes.",
+      "description": "Nous avançons étape par étape, en laissant le temps à la réflexion.",
+      "steps": [
+        {
+          "title": "Commençons par échanger",
+          "description": "Prenons le temps de comprendre ce qui vous amène au coaching et ce que vous souhaitez faire évoluer."
+        },
+        {
+          "title": "Définissons votre priorité",
+          "description": "Ensemble, clarifions une direction qui a du sens et un rythme qui vous convient."
+        },
+        {
+          "title": "Faisons le prochain pas",
+          "description": "Chaque séance vous offre un espace pour réfléchir, explorer des options et décider de la suite."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Faites le premier pas",
+      "title": "Parlons de ce qui compte pour vous.",
+      "description": "Réservez un premier appel gratuit pour nous parler de vos attentes et voir si le coaching est la bonne prochaine étape."
+    }
+  },
+  "courses": {
+    "title": "Programmes de coaching",
+    "hero": {
+      "eyebrow": "Trouvez votre voie",
+      "title": "Un accompagnement adapté à ce qui compte pour vous.",
+      "description": "Il n’existe pas de parcours universel. Découvrez les sujets que nous pouvons explorer ensemble, puis construisons un accompagnement adapté à vos objectifs, votre situation et votre rythme.",
+      "imageAlt": "Une séance de coaching",
+      "cardSubtitle": "Un partenariat, pas une recette toute faite."
+    },
+    "programs": {
+      "eyebrow": "Découvrez les programmes",
+      "title": "Un accompagnement pour chaque prochaine étape.",
+      "description": "Choisissez un point de départ. Nous adapterons l’accompagnement à vos besoins lors d’un premier échange gratuit.",
+      "items": [
+        {
+          "title": "Épanouissement personnel",
+          "description": "Développez votre connaissance de vous-même, votre confiance et des habitudes pour avancer.",
+          "focus": ["Confiance en soi", "Objectifs personnels", "Habitudes durables"]
+        },
+        {
+          "title": "Carrière et sens",
+          "description": "Clarifiez votre vie professionnelle, traversez les changements et choisissez la suite.",
+          "focus": ["Orientation professionnelle", "Transitions et décisions", "Confiance au travail"]
+        },
+        {
+          "title": "Équilibre de vie",
+          "description": "Reconnectez-vous à l’essentiel et créez un quotidien plus équilibré et durable.",
+          "focus": ["Limites et priorités", "Gestion du changement", "Bien-être au quotidien"]
+        },
+        {
+          "title": "Leadership",
+          "description": "Développez un leadership ancré, clair et fidèle à vos valeurs.",
+          "focus": ["Confiance en leadership", "Communication", "Accompagner le changement"]
+        }
+      ],
+      "learnMoreAbout": "En savoir plus sur",
+      "focusLabel": "Nous pouvons travailler sur",
+      "explore": "Découvrir ce programme"
+    },
+    "process": {
+      "eyebrow": "Un premier pas tout simple",
+      "title": "Comment se déroule notre accompagnement ?",
+      "description": "Nous commençons par un échange, clarifions vos envies et définissons la suite ensemble.",
+      "steps": [
+        {
+          "title": "Faisons connaissance",
+          "description": "Parlez-moi de vos attentes lors d’un appel gratuit et sans pression."
+        },
+        {
+          "title": "Définissons votre priorité",
+          "description": "Choisissez un sujet et convenons d’un rythme qui vous convient."
+        },
+        {
+          "title": "Avançons ensemble",
+          "description": "Chaque séance vous aide à réfléchir, décider et passer à l’action."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Vous ne savez pas par où commencer ?",
+      "title": "Trouvons ensemble ce qui vous correspond.",
+      "description": "Réservez un premier appel gratuit. Nous parlerons de vos attentes et verrons si le coaching vous convient."
+    }
+  },
+  "howItWorks": {
+    "intro": {
+      "eyebrow": "Un parcours clair et collaboratif",
+      "title": "Un premier échange, puis un pas après l’autre.",
+      "description": "Le coaching se construit avec vous. Nous clarifions ce qui compte, convenons d’un cap et adaptons les échanges à votre situation."
+    },
+    "steps": [
+      {
+        "title": "Réserver un appel découverte",
+        "description": "Nous commençons par un échange gratuit et sans pression. Vous pouvez partager ce qui vous amène et poser vos questions."
+      },
+      {
+        "title": "Faire le point ensemble",
+        "description": "Nous prenons le temps de comprendre votre situation actuelle, vos ressources et ce que vous souhaitez voir évoluer."
+      },
+      {
+        "title": "Définir un cap personnalisé",
+        "description": "Nous choisissons un objectif et un rythme adaptés à vos priorités. Vous savez ainsi à quoi vous attendre avant de commencer."
+      },
+      {
+        "title": "Avancer à votre rythme",
+        "description": "Les séances vous aident à réfléchir, tester des pistes et transformer vos prises de conscience en prochaines étapes concrètes."
+      }
+    ],
+    "cta": {
+      "title": "Vous n’avez pas besoin d’avoir toutes les réponses.",
+      "description": "L’appel découverte est simplement l’occasion de voir si le coaching et notre façon de travailler vous conviennent."
+    }
+  },
+  "pricing": {
+    "intro": {
+      "eyebrow": "Un accompagnement adapté",
+      "title": "Choisissez le niveau de soutien qui vous convient.",
+      "description": "Chaque parcours est différent. Les tarifs sont personnalisés selon vos objectifs et le niveau d’accompagnement souhaité ; nous en parlons clairement avant tout engagement."
+    },
+    "plans": [
+      {
+        "name": "Standard",
+        "description": "Un accompagnement ciblé autour d’un objectif ou d’un défi.",
+        "features": [
+          "Séances individuelles",
+          "Clarification de vos objectifs",
+          "Rythme défini ensemble",
+          "Séances en ligne disponibles"
+        ]
+      },
+      {
+        "name": "Premium",
+        "description": "Un accompagnement continu pour avancer dans la durée.",
+        "features": [
+          "Tout le contenu de la formule Standard",
+          "Un suivi régulier entre les étapes clés",
+          "Un plan adapté à votre rythme",
+          "Un espace pour faire le point et ajuster"
+        ]
+      }
+    ],
+    "discussedDuringDiscoveryCall": "Défini ensemble lors de votre appel découverte gratuit.",
+    "discussPlan": "Discuter de cette formule",
+    "cta": {
+      "title": "Vous souhaitez d’abord en savoir plus ?",
+      "description": "Votre premier appel est gratuit et sans engagement. Nous pouvons parler de vos objectifs, des options et des tarifs."
+    }
+  },
+  "feedbacks": {
+    "title": "Témoignages",
+    "eyebrow": "Des parcours singuliers",
+    "heading": "Les témoignages de coaching seront bientôt disponibles.",
+    "description": "Chaque accompagnement est personnel. Nous publierons ici des retours authentiques avec l’accord des personnes concernées. En attendant, découvrez notre approche ou parlons de vos objectifs.",
+    "exploreProcess": "Découvrir le coaching"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "eyebrow": "Pour bien commencer",
+    "heading": "Quelques réponses avant notre premier échange.",
+    "description": "Vous ne trouvez pas la réponse à votre question ? Écrivez-moi et nous en parlerons.",
+    "questions": [
+      {
+        "question": "Comment se déroule le coaching ?",
+        "answer": "Nous commençons par un appel découverte gratuit pour comprendre vos attentes. Si le coaching vous convient, nous définissons ensemble un objectif et un rythme. Les séances vous offrent un espace pour réfléchir, explorer des pistes et choisir des prochaines étapes concrètes."
+      },
+      {
+        "question": "Combien de temps dure une séance ?",
+        "answer": "La durée dépend du format que nous choisissons ensemble. Nous pouvons en parler lors de votre appel découverte."
+      },
+      {
+        "question": "À qui s’adresse le coaching ?",
+        "answer": "Le coaching peut vous aider si vous souhaitez traverser un défi, amorcer un changement ou avancer vers un objectif personnel ou professionnel. Il n’est pas nécessaire d’avoir toutes les réponses avant notre premier échange."
+      },
+      {
+        "question": "Les séances peuvent-elles se dérouler en ligne ?",
+        "answer": "Oui. Les séances en ligne vous permettent de participer depuis l’endroit qui vous convient."
+      },
+      {
+        "question": "Comment réserver un premier appel ?",
+        "answer": "Utilisez le lien de réservation pour choisir une date et un horaire souhaités, puis envoyez-nous votre demande par e-mail."
+      },
+      {
+        "question": "Combien coûte le coaching ?",
+        "answer": "Les tarifs dépendent du type et du niveau d’accompagnement souhaités. Nous discutons des options et de leur coût avant que vous ne décidiez de commencer."
+      },
+      {
+        "question": "Le coaching est-il la même chose qu’une thérapie ?",
+        "answer": "Le coaching est axé sur la réflexion, les objectifs et les actions à venir. Il ne remplace pas une thérapie ni un suivi médical. Si vous avez besoin d’un accompagnement clinique, veuillez contacter un professionnel de santé qualifié."
+      }
+    ],
+    "askQuestion": "Poser une question"
+  },
+  "booking": {
+    "title": "Réservation",
+    "appointmentTypes": {
+      "discovery": {
+        "title": "Appel découverte gratuit",
+        "description": "Un premier échange autour de vos objectifs."
+      },
+      "coaching": {
+        "title": "Séance de coaching",
+        "description": "Un accompagnement individuel pour avancer."
+      },
+      "online": {
+        "title": "Coaching en ligne",
+        "description": "Un échange en ligne, où que vous soyez."
+      }
+    },
+    "weekdays": ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+    "notices": {
+      "chooseDateAndTime": "Veuillez choisir une date et un horaire.",
+      "emailWillOpen": "Votre application e-mail va s’ouvrir avec votre demande. La réservation sera confirmée après réponse."
+    },
+    "email": {
+      "subject": "Demande de réservation de coaching",
+      "name": "Nom",
+      "appointmentType": "Type de rendez-vous",
+      "preferredDate": "Date souhaitée",
+      "preferredTime": "Heure souhaitée",
+      "timeZone": "Fuseau horaire",
+      "notes": "Message"
+    },
+    "labels": {
+      "email": "E-mail",
+      "duration": "Durée"
+    },
+    "intro": {
+      "eyebrow": "Votre prochain pas commence ici",
+      "title": "Réserver un appel découverte gratuit",
+      "description": "Choisissez le type de rendez-vous, une date et un horaire souhaités. Nous vous confirmerons la disponibilité par e-mail."
+    },
+    "step1": {
+      "title": "Choisissez votre rendez-vous",
+      "description": "Sélectionnez le format qui vous convient."
+    },
+    "step2": {
+      "title": "Sélectionnez une date",
+      "discoveryAvailability": "Disponible en semaine et le week-end.",
+      "weekendsUnavailable": "Les week-ends ne sont pas proposés.",
+      "previousMonth": "Mois précédent",
+      "nextMonth": "Mois suivant"
+    },
+    "step3": {
+      "title": "Choisissez un horaire",
+      "description": "Fuseau horaire local",
+      "chooseDateFirst": "Choisissez d’abord une date pour voir les horaires proposés.",
+      "subjectToConfirmation": "Horaire souhaité, sous réserve de confirmation par e-mail."
+    },
+    "step4": {
+      "title": "Vos coordonnées",
+      "description": "Pour vous répondre et confirmer l’horaire.",
+      "firstName": "Prénom",
+      "notes": "Quelques mots sur vos objectifs (facultatif)"
+    },
+    "submit": "Envoyer ma demande de réservation",
+    "disclaimer": "Votre demande n’est pas confirmée automatiquement. Votre application e-mail s’ouvrira pour envoyer les détails, puis nous vous confirmerons la disponibilité.",
+    "summary": {
+      "title": "Récapitulatif",
+      "appointment": "Rendez-vous",
+      "date": "Date",
+      "time": "Heure",
+      "notSelected": "À sélectionner",
+      "price": "Tarif",
+      "free": "Gratuit",
+      "toBeDiscussed": "À convenir",
+      "confirmationNote": "Un rendez-vous est confirmé uniquement après notre réponse par e-mail.",
+      "contactLink": "Une question ? Contactez-moi"
+    }
+  }
+}
