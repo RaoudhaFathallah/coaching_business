@@ -15,15 +15,10 @@ const FooterThree: React.FC = () => {
   const { language } = useLanguage();
   // Only the coaching landing pages are translated; other routes stay in English.
   const { t } = getTranslations(isTranslatedRoute(pathname) ? language : "en");
-  const isAboutPage = pathname.replace(/\/$/, "") === "/about-me";
 
   return (
     <>
-      <footer
-        className={`${
-          isAboutPage ? "about-me-footer bg-transparent" : "bg-[#112240]"
-        } pt-[50px] md:pt-[60px] lg:pt-[140px]`}
-      >
+      <footer className="bg-[#112240] pt-[50px] md:pt-[60px] lg:pt-[140px]">
         <div className="container mx-auto">
           <div className="grid items-center gap-[30px] grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
             <div className="lg:flex items-center space-y-[30px] lg:space-y-[0] lg:space-x-[50px] rtl:space-x-reverse">

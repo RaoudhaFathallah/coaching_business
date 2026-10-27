@@ -46,30 +46,6 @@ p {
   color: var(--optionalText);
 }
 
-.about-me-header {
-  background-color: transparent;
-}
-
-.about-me-header * {
-  color: #23274A !important;
-}
-
-.about-me-header li::before {
-  background-color: #d9dce3 !important;
-}
-
-.about-me-footer {
-  background-color: transparent;
-}
-
-.about-me-footer * {
-  color: #626775 !important;
-}
-
-.about-me-footer hr {
-  border-color: #e7e9ee;
-}
-
 .text-black {
   color: #23274A;
 }

@@ -61,9 +61,7 @@ const NavbarThree: React.FC = () => {
     <>
       <div
         id="navbar"
-        className={`navbar-area navbar-style-two ${
-          isAboutPage ? "bg-transparent" : "bg-[#ffff]"
-        } relative z-[2] py-[20px] lg:py-[25px] xl:py-0`}
+        className="navbar-area navbar-style-two bg-[#ffff] relative z-[2] py-[20px] lg:py-[25px] xl:py-0"
       >
         <div className="container mx-auto max-w-[1570px]">
           <nav
