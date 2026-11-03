@@ -3,18 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useLanguage } from "@/providers/LanguageProvider";
-import { getTranslations } from "@/locales";
-import { isTranslatedRoute } from "@/locales/routes";
 
 import logo from "/public/images/logo-1.png";
 
 const FooterThree: React.FC = () => {
-  const pathname = usePathname();
-  const { language } = useLanguage();
-  // Only the coaching landing pages are translated; other routes stay in English.
-  const { t } = getTranslations(isTranslatedRoute(pathname) ? language : "en");
+  const { t } = useLanguage();
 
   return (
     <>
