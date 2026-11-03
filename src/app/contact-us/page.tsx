@@ -1,32 +1,28 @@
-import TopHeader from "@/components/Layout/TopHeader";
-import Navbar from "@/components/Layout/Navbar";
+"use client";
+
 import PageBannerTitle from "@/components/Common/PageBannerTitle";
-import NewsletterBox from "@/components/Common/NewsletterBox";
-import Footer from "@/components/Layout/Footer";
 import ContactInfo from "@/components/ContactUs/ContactInfo";
 import ContactForm from "@/components/ContactUs/ContactForm";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 export default function ContactUsPage() {
+  const { t } = useLanguage();
+
   return (
     <>
-      
-
       <PageBannerTitle
-        title="Contact us"
-        homeText="Home"
+        title={t("nav.contact")}
+        homeText={t("common.home")}
         homeUrl="/"
-        image="/images/page-banner1.jpg"
-        image2="/images/page-banner2.jpg"
-        image3="/images/page-banner3.jpg"
+        image="/images/life-coach/about-me.jpg"
+        image2="/images/life-coach/service1.jpg"
+        image3="/images/life-coach/service2.jpg"
       />
 
       <div className="bg-[#ffff]">
         <ContactInfo />
-
         <ContactForm />
-
       </div>
-
     </>
   );
 }

@@ -7,8 +7,10 @@ import GoogleMap from "./GoogleMap";
 import Input from "../FormHelpers/Input";
 import TextArea from "../FormHelpers/TextArea";
 import Button from "../FormHelpers/Button";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 const ContactForm: React.FC = () => {
+  const { t } = useLanguage();
   const {
     register,
     handleSubmit,
@@ -24,7 +26,7 @@ const ContactForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     // console.log(data);
-    toast.success("Successfully submitted your feedback!");
+    toast.success(t("contactPage.successMessage"));
     reset();
   };
 
@@ -40,7 +42,7 @@ const ContactForm: React.FC = () => {
 
             <div>
               <h2 className="text-bold text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-none mb-[20px]">
-                Send your message
+                {t("contactPage.formTitle")}
               </h2>
 
               <form
@@ -50,14 +52,14 @@ const ContactForm: React.FC = () => {
                 <div className="grid gap-[25px] grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                   <Input
                     id="email"
-                    placeholder="Your Email"
+                    placeholder={t("contactPage.emailPlaceholder")}
                     register={register}
                     errors={errors}
                     required
                   />
                   <Input
                     id="name"
-                    placeholder="Your Name"
+                    placeholder={t("contactPage.namePlaceholder")}
                     register={register}
                     errors={errors}
                     required
@@ -66,14 +68,14 @@ const ContactForm: React.FC = () => {
 
                 <TextArea
                   id="comment"
-                  placeholder="Message...."
+                  placeholder={t("contactPage.messagePlaceholder")}
                   register={register}
                   errors={errors}
                   required
                 />
 
                 <Button
-                  label="Send Your Message"
+                  label={t("contactPage.submitButton")}
                   classAtts="
                     bg-[#717FF8] 
                     text-[#fff] 

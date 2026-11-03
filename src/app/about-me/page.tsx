@@ -58,7 +58,7 @@ export default function AboutMePage() {
             <div className="absolute -inset-3 rounded-[48%_48%_18px_18px] border border-white/25" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[48%_48%_18px_18px] bg-[#dce9e5]">
               <Image
-                src="/images/life-coach/about-me2.jpg"
+                src="/images/life-coach/about1.jpg"
                 alt={t("aboutMe.hero.imageAlt")}
                 fill
                 priority
@@ -77,7 +77,7 @@ export default function AboutMePage() {
         <div className="container mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2 lg:gap-20">
           <div className="relative mx-auto w-full max-w-[540px]">
             <Image
-              src="/images/life-coach/about-me.jpg"
+              src="/images/life-coach/about2.jpg"
               alt={t("aboutMe.philosophy.imageAlt")}
               width={1026}
               height={684}
@@ -168,15 +168,15 @@ export default function AboutMePage() {
         </div>
       </section>
 
-      <section className="bg-[#112240] px-5 py-16 text-center text-white sm:px-8 md:py-20">
+      <section className="bg-[#F7F8FA] px-5 py-16 text-center text-white sm:px-8 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#E6B325]">
             {t("aboutMe.cta.eyebrow")}
           </p>
-          <h2 className="mb-5 text-3xl leading-tight text-white sm:text-4xl">
+          <h2 className="mb-5 text-3xl leading-tight text-[#23274A] sm:text-4xl">
             {t("aboutMe.cta.title")}
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-white/75">
+          <p className="mx-auto mb-8 max-w-2xl text-[#626775]/75">
             {t("aboutMe.cta.description")}
           </p>
           <Link

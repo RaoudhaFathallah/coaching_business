@@ -7,10 +7,10 @@ import { useLanguage } from "@/providers/LanguageProvider";
 
 // Non-translatable data; order matches `courses.programs.items` in the locale files.
 const programMeta = [
-  { image: "/images/life-coach/course-img1.jpg", icon: "ri-seedling-line" },
-  { image: "/images/life-coach/course-img2.jpg", icon: "ri-briefcase-4-line" },
-  { image: "/images/life-coach/course-img3.jpg", icon: "ri-scales-3-line" },
-  { image: "/images/life-coach/course-img4.jpg", icon: "ri-compass-3-line" },
+  { image: "/images/life-coach/service1.jpg", icon: "ri-seedling-line" },
+  { image: "/images/life-coach/service2.jpg", icon: "ri-briefcase-4-line" },
+  { image: "/images/life-coach/service3.jpg", icon: "ri-scales-3-line" },
+  { image: "/images/life-coach/service4.jpg", icon: "ri-compass-3-line" },
 ];
 
 const processNumbers = ["01", "02", "03"];
@@ -32,9 +32,9 @@ export default function CoursesPage() {
         title={t("courses.title")}
         homeText={t("common.home")}
         homeUrl="/"
-        image="/images/page-banner1.jpg"
-        image2="/images/page-banner2.jpg"
-        image3="/images/page-banner3.jpg"
+        image="/images/life-coach/service1.jpg"
+        image2="/images/life-coach/service2.jpg"
+        image3="/images/life-coach/service3.jpg"
       />
 
       <section className="bg-white px-5 py-16 sm:px-8 md:py-20">
@@ -59,7 +59,7 @@ export default function CoursesPage() {
           </div>
           <div className="relative mx-auto w-full max-w-[500px]">
             <Image
-              src="/images/life-coach/course-img1.jpg"
+              src="/images/life-coach/about-me.jpg"
               alt={t("courses.hero.imageAlt")}
               width={800}
               height={600}

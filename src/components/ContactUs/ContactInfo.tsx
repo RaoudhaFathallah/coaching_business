@@ -1,21 +1,20 @@
 "use client";
 
 import React from "react";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 const ContactInfo: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       <div className="pt-[50px] md:pt-[60px] lg:pt-[140px]">
         <div className="container mx-auto">
           <div className="max-w-[650px] mb-[30px]">
             <h2 className="text-bold text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-none mb-[15px]">
-              Contact with us for details
+              {t("contactPage.infoTitle")}
             </h2>
-            <p>
-              This story, dazzling in its powerful simplicity and soul-stirring
-              wisdom, is about an Andalusian shepherd boy named Santiago who
-              travels.
-            </p>
+            <p>{t("contactPage.infoDescription")}</p>
           </div>
 
           <div className="grid gap-[25px] grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
@@ -24,6 +23,9 @@ const ContactInfo: React.FC = () => {
                 <i className="ri-message-2-line"></i>
               </div>
               <div className="space-y-[5px]">
+                <h3 className="font-semibold text-black group-hover:text-white">
+                  {t("contactPage.emailLabel")}
+                </h3>
                 <a
                   href="mailto:hellocoaching@gmail.com"
                   className="break-all block font-bold text-black text-[15px] md:text-[18px] hover:text-[#717FF8] group-hover:text-[#fff]"
@@ -44,6 +46,9 @@ const ContactInfo: React.FC = () => {
                 <i className="ri-phone-line"></i>
               </div>
               <div className="space-y-[5px]">
+                <h3 className="font-semibold text-black group-hover:text-white">
+                  {t("contactPage.phoneLabel")}
+                </h3>
                 <a
                   href="tel:+48 93939 0239"
                   className="block font-bold text-black text-[15px] md:text-[18px] hover:text-[#717FF8] group-hover:text-[#fff]"
@@ -64,8 +69,11 @@ const ContactInfo: React.FC = () => {
                 <i className="ri-map-pin-line"></i>
               </div>
               <div className="space-y-[5px]">
+                <h3 className="font-semibold text-black group-hover:text-white">
+                  {t("contactPage.addressLabel")}
+                </h3>
                 <p className="block font-bold text-black text-[15px] md:text-[18px] hover:text-[#717FF8] group-hover:text-[#fff]">
-                  1234 East 27th Street, New York, NY 101010
+                  {t("contactPage.address")}
                 </p>
               </div>
             </div>

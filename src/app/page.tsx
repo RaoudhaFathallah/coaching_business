@@ -19,6 +19,13 @@ const programIcons = [
   "ri-compass-3-line",
 ];
 
+const programImages = [
+  "/images/life-coach/service1.jpg",
+  "/images/life-coach/service2.jpg",
+  "/images/life-coach/service3.jpg",
+  "/images/life-coach/service4.jpg",
+];
+
 function SectionHeading({
   eyebrow,
   title,
@@ -78,6 +85,7 @@ export default function HomePage() {
   const programs = messages.home.programs.items.map((program, index) => ({
     ...program,
     icon: programIcons[index],
+    image: programImages[index],
   }));
   const steps = messages.home.process.steps;
   const plans = messages.home.pricing.plans;
@@ -207,21 +215,32 @@ export default function HomePage() {
             {programs.map((program) => (
               <article
                 key={program.icon}
-                className="flex h-full flex-col rounded-xl border border-[#e7e9ee] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="flex h-full flex-col overflow-hidden rounded-xl border border-[#e7e9ee] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-[#F8F1E1] text-2xl text-[#112240]">
-                  <i aria-hidden="true" className={program.icon} />
-                </span>
-                <h3 className="mb-3 text-xl">{program.title}</h3>
-                <p className="mb-5 flex-1 text-sm text-[#626775]">
-                  {program.description}
-                </p>
-                <Link
-                  href="/courses/"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#112240] hover:text-[#717FF8]"
-                >
-                  {t("common.learnMore")} <i aria-hidden="true" className="ri-arrow-right-line" />
-                </Link>
+                <div className="relative aspect-[4/3] w-full bg-[#F8F1E1]">
+                  <Image
+                    src={program.image}
+                    alt={`${program.title} : échange de coaching`}
+                    fill
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 280px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-[#F8F1E1] text-2xl text-[#112240]">
+                    <i aria-hidden="true" className={program.icon} />
+                  </span>
+                  <h3 className="mb-3 text-xl">{program.title}</h3>
+                  <p className="mb-5 flex-1 text-sm text-[#626775]">
+                    {program.description}
+                  </p>
+                  <Link
+                    href="/courses/"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#112240] hover:text-[#717FF8]"
+                  >
+                    {t("common.learnMore")} <i aria-hidden="true" className="ri-arrow-right-line" />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
@@ -353,15 +372,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#112240] px-5 py-16 text-center text-white sm:px-8 md:py-24">
+      <section className="bg-[#F7F8FA] px-5 py-16 text-center text-white sm:px-8 md:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#E6B325]">
             {t("home.cta.eyebrow")}
           </p>
-          <h2 className="mb-5 text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mb-5 text-3xl leading-tight text-[#23274A] sm:text-4xl lg:text-5xl">
             {t("home.cta.title")}
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-white/75">
+          <p className="mx-auto mb-8 max-w-2xl text-[#626775]/75">
             {t("home.cta.description")}
           </p>
           <PrimaryButton>{t("common.bookFreeCall")}</PrimaryButton>

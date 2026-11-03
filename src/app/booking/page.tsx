@@ -188,7 +188,7 @@ export default function BookingPage() {
                         }}
                         className={`rounded-xl border p-4 text-left transition ${
                           selected
-                            ? "border-[#112240] bg-[#F7F8FA] ring-1 ring-[#112240]"
+                            ? "border-[#E6B325] bg-[#F8F1E1] ring-1 ring-[#E6B325]"
                             : "border-[#e7e9ee] hover:border-[#b88712]"
                         }`}
                       >
@@ -294,7 +294,7 @@ export default function BookingPage() {
                           }}
                           className={`mx-auto flex h-9 w-9 items-center justify-center rounded-full text-sm transition ${
                             selected
-                              ? "bg-[#112240] font-semibold text-white"
+                              ? "bg-[#E6B325] font-semibold text-[#23274A]"
                               : disabled
                                 ? "cursor-not-allowed text-[#c4c7ce]"
                                 : "text-[#23274A] hover:bg-[#F8F1E1]"
@@ -342,7 +342,7 @@ export default function BookingPage() {
                             }}
                             className={`rounded-lg border px-3 py-2.5 text-sm font-semibold transition ${
                               selectedTime === slot
-                                ? "border-[#112240] bg-[#112240] text-white"
+                                ? "border-[#E6B325] bg-[#E6B325] text-[#23274A]"
                                 : "border-[#e7e9ee] text-[#23274A] hover:border-[#b88712]"
                             }`}
                           >
@@ -415,7 +415,7 @@ export default function BookingPage() {
 
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#717FF8] px-6 py-4 font-semibold text-[#23274A] transition hover:bg-[#5968e8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#717FF8]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#112240] px-6 py-4 font-semibold text-white transition hover:bg-[#1a3258] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#112240]"
               >
                 {t("booking.submit")}
                 <i aria-hidden="true" className="ri-arrow-right-up-line" />
@@ -425,53 +425,54 @@ export default function BookingPage() {
               </p>
             </div>
 
-            <aside className="rounded-2xl bg-[#717FF8] p-6 text-[#23274A] lg:sticky lg:top-28">
-              <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/25 text-2xl text-[#23274A]">
+            <aside className="rounded-[18px] bg-[#122b4b] p-5 text-white shadow-sm lg:sticky lg:top-28">
+              <span className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E6B325]/15 text-xl text-[#E6B325]">
                 <i aria-hidden="true" className="ri-calendar-check-line" />
               </span>
-              <h2 className="mb-5 text-2xl text-[#23274A]">
+              <h2 className="mb-4 text-[2rem] font-bold leading-none text-white">
                 {t("booking.summary.title")}
               </h2>
-              <dl className="space-y-4 text-sm">
+
+              <dl className="space-y-3 text-sm">
                 <div>
-                  <dt className="text-[#23274A]">
-                    {t("booking.summary.appointment")}
-                  </dt>
-                  <dd className="mt-1 font-semibold">
+                  <dt className="text-white/75">{t("booking.summary.appointment")}</dt>
+                  <dd className="mt-1 font-semibold text-white">
                     {currentAppointmentCopy.title}
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-[#23274A]">{t("booking.labels.duration")}</dt>
-                  <dd className="mt-1 font-semibold">{currentAppointment.duration}</dd>
-                </div>
-                <div>
-                  <dt className="text-[#23274A]">{t("booking.summary.date")}</dt>
-                  <dd className="mt-1 font-semibold capitalize">
+                  <dt className="text-white/75">{t("booking.summary.date")}</dt>
+                  <dd className="mt-1 font-semibold capitalize text-white">
                     {formattedDate || t("booking.summary.notSelected")}
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-[#23274A]">{t("booking.summary.time")}</dt>
-                  <dd className="mt-1 font-semibold">
+                  <dt className="text-white/75">{t("booking.summary.time")}</dt>
+                  <dd className="mt-1 font-semibold text-white">
                     {selectedTime || t("booking.summary.notSelected")}
                   </dd>
                 </div>
-                <div className="border-t border-[#23274A]/20 pt-4">
-                  <dt className="text-[#23274A]">{t("booking.summary.price")}</dt>
-                  <dd className="mt-1 text-lg font-semibold text-[#23274A]">
+                <div>
+                  <dt className="text-white/75">{t("booking.labels.duration")}</dt>
+                  <dd className="mt-1 font-semibold text-white">{currentAppointment.duration}</dd>
+                </div>
+                <div className="border-t border-white/15 pt-3">
+                  <dt className="text-white/75">{t("booking.summary.price")}</dt>
+                  <dd className="mt-1 text-[2rem] font-bold leading-none text-[#E6B325]">
                     {appointmentId === "discovery"
                       ? t("booking.summary.free")
                       : t("booking.summary.toBeDiscussed")}
                   </dd>
                 </div>
               </dl>
-              <p className="mt-6 border-t border-[#23274A]/20 pt-5 text-sm leading-relaxed text-[#23274A]">
+
+              <p className="mt-5 border-t border-white/15 pt-4 text-sm leading-relaxed text-white/80">
                 {t("booking.summary.confirmationNote")}
               </p>
+
               <Link
                 href="/contact-us/"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#23274A] underline hover:text-[#4B53A5]"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#E6B325] underline decoration-[#E6B325]/80 underline-offset-4 hover:text-[#f0c84f]"
               >
                 {t("booking.summary.contactLink")}
                 <i aria-hidden="true" className="ri-arrow-right-line" />

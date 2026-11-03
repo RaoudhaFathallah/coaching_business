@@ -17,7 +17,6 @@ const NavbarThree: React.FC = () => {
   const isAboutPage = normalizedRoute === "/about-me";
   const isProgramsPage = normalizedRoute === "/courses";
   const isHowItWorksPage = normalizedRoute === "/how-it-works";
-  const isPricingPage = normalizedRoute === "/pricing";
   const isTestimonialsPage = normalizedRoute === "/feedbacks";
   const isFaqPage = normalizedRoute === "/faq";
   const isContactPage = normalizedRoute === "/contact-us";
@@ -27,7 +26,6 @@ const NavbarThree: React.FC = () => {
     isAboutPage,
     isProgramsPage,
     isHowItWorksPage,
-    isPricingPage,
     isTestimonialsPage,
     isFaqPage,
     isContactPage,
@@ -88,8 +86,8 @@ const NavbarThree: React.FC = () => {
               </span>
             </button>
 
-            <div className="navbar-collapse flex self-center grow basis-auto">
-              <ul className="navbar-nav self-center flex-row ml-auto rtl:ml-0 rtl:mr-auto xl:pr-[50px] rtl:xl:pr-0 rtl:xl:pl-[50px] xl:flex">
+            <div className="navbar-collapse flex grow basis-auto items-center justify-end self-center">
+              <ul className="navbar-nav ml-auto flex flex-col items-center justify-center gap-4 text-center rtl:ml-0 rtl:mr-auto xl:flex xl:flex-row xl:items-center xl:justify-end xl:gap-4 xl:pr-[50px] rtl:xl:pr-0 rtl:xl:pl-[50px]">
                 {showLandingNavigation ? (
                   <>
                     {[
@@ -97,34 +95,33 @@ const NavbarThree: React.FC = () => {
                       [t("nav.about"), "/about-me/"],
                       [t("nav.programs"), "/courses/"],
                       [t("common.howItWorks"), "/how-it-works/"],
-                      [t("common.pricing"), "/pricing/"],
                       [t("nav.testimonials"), "/feedbacks/"],
                       [t("nav.faq"), "/faq/"],
                       [t("nav.contact"), "/contact-us/"],
                     ].map(([label, href]) => (
                       <li
                         key={href}
-                        className="xl:mx-[8px] 2xl:mx-[12px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative"
+                        className="relative w-full xl:w-auto"
                       >
                         <Link
                           href={href}
                           onClick={() => setActive(false)}
-                          className="text-[15px] font-medium text-black transition-all hover:text-[#717FF8]"
+                          className="inline-flex items-center px-1 text-[15px] font-medium text-black transition-all hover:text-[#717FF8]"
                         >
                           {label}
                         </Link>
                       </li>
                     ))}
-                    <li className="xl:mx-[8px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative">
+                    <li className="relative w-full flex justify-center xl:w-auto">
                       <Link
                         href="/booking/"
                         onClick={() => setActive(false)}
-                        className="inline-flex items-center rounded bg-[#E6B325] px-4 py-2 text-sm font-semibold text-[#23274A] transition hover:bg-[#f0c84f]"
+                        className="inline-flex items-center justify-center rounded bg-[#E6B325] px-5 py-2.5 text-sm font-semibold text-[#23274A] transition hover:bg-[#f0c84f]"
                       >
                         {t("common.bookFreeCall")}
                       </Link>
                     </li>
-                    <li className="flex items-center gap-1 py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] xl:ml-2">
+                    <li className="flex w-full items-center justify-center gap-1 xl:ml-2 xl:w-auto">
                       {(["fr", "en"] as const).map((option) => (
                         <button
                           key={option}

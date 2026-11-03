@@ -18,7 +18,7 @@ const TopHeaderTwo: React.FC = () => {
         <div className="container mx-auto max-w-[1570px]">
           <div className="grid items-center gap-[10px] lg:gap-[30px] grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
             <div className="text-center lg:text-left rtl:lg:text-right">
-              <p className="text-[#F8F1E1] text-[13px] lg:text-[16px]">
+              <p className="text-[#F8F1E1] text-[13px] lg:text-[15px]">
                 <span className="font-semibold">
                   <i className="ri-time-line"></i> {t("topHeader.workingHours")}
                 </span>{" "}
