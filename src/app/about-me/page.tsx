@@ -25,9 +25,9 @@ export default function AboutMePage() {
         title={t("common.aboutMe")}
         homeText={t("common.home")}
         homeUrl="/"
-        image="/images/page-banner1.jpg"
-        image2="/images/page-banner2.jpg"
-        image3="/images/page-banner3.jpg"
+        image="/images/life-coach/Polished Corporate Office Portrait.png"
+        image2="/images/life-coach/Confident Consultant in Modern Office.png"
+        image3="/images/life-coach/Coaching Business Professional Portfolio Collage.png"
       />
 
       <section className="bg-[#112240] px-5 py-16 text-white sm:px-8 md:py-24 lg:py-28">
@@ -58,7 +58,7 @@ export default function AboutMePage() {
             <div className="absolute -inset-3 rounded-[48%_48%_18px_18px] border border-white/25" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[48%_48%_18px_18px] bg-[#dce9e5]">
               <Image
-                src="/images/life-coach/about1.jpg"
+                src="/images/life-coach/Polished Corporate Office Portrait.png"
                 alt={t("aboutMe.hero.imageAlt")}
                 fill
                 priority
@@ -77,7 +77,7 @@ export default function AboutMePage() {
         <div className="container mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2 lg:gap-20">
           <div className="relative mx-auto w-full max-w-[540px]">
             <Image
-              src="/images/life-coach/about2.jpg"
+              src="/images/life-coach/Confident Consultant in Modern Office.png"
               alt={t("aboutMe.philosophy.imageAlt")}
               width={1026}
               height={684}

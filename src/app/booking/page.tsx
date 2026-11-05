@@ -1,9 +1,16 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import PageBannerTitle from "@/components/Common/PageBannerTitle";
 import { useLanguage } from "@/providers/LanguageProvider";
+import {
+  ApiError,
+  AppointmentType,
+  BookingAvailabilitySlot,
+  createBooking,
+  getBookingAvailability,
+} from "@/lib/api";
 
 // Non-translatable data; labels live under `booking.appointmentTypes.<id>` in the locale files.
 const appointmentTypes = [
@@ -14,16 +21,11 @@ const appointmentTypes = [
 
 type AppointmentId = (typeof appointmentTypes)[number]["id"];
 
-const defaultTimeSlots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
-const weekendDiscoveryTimeSlots = [
-  ...Array.from({ length: 10 }, (_, index) => {
-    const minutes = 14 * 60 + index * 15;
-    return `${String(Math.floor(minutes / 60)).padStart(2, "0")}:${String(
-      minutes % 60
-    ).padStart(2, "0")}`;
-  }),
-  "20:00",
-];
+const apiAppointmentTypes: Record<AppointmentId, AppointmentType> = {
+  discovery: "FreeAssessmentCall",
+  coaching: "GroupCoaching",
+  online: "PrivateOneOnOneCoaching",
+};
 
 const intlLocales = { en: "en-US", fr: "fr-FR" } as const;
 
@@ -49,6 +51,12 @@ export default function BookingPage() {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [notice, setNotice] = useState("");
+  const [availableTimeSlots, setAvailableTimeSlots] = useState<
+    BookingAvailabilitySlot[]
+  >([]);
+  const [isLoadingSlots, setIsLoadingSlots] = useState(false);
+  const [availabilityError, setAvailabilityError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const currentAppointment =
     appointmentTypes.find((appointment) => appointment.id === appointmentId) ??
@@ -59,12 +67,6 @@ export default function BookingPage() {
     ? new Date(`${selectedDate}T12:00:00`).getDay()
     : null;
   const isSelectedWeekend = selectedDay === 0 || selectedDay === 6;
-  const availableTimeSlots =
-    appointmentId === "discovery"
-      ? isSelectedWeekend
-        ? weekendDiscoveryTimeSlots
-        : ["20:00"]
-      : defaultTimeSlots;
   const firstWeekday = (month.getDay() + 6) % 7;
   const daysInMonth = new Date(
     month.getFullYear(),
@@ -84,16 +86,56 @@ export default function BookingPage() {
       }).format(new Date(`${selectedDate}T12:00:00`))
     : "";
 
+  useEffect(() => {
+    if (!selectedDate) {
+      setAvailableTimeSlots([]);
+      setAvailabilityError(false);
+      setIsLoadingSlots(false);
+      return;
+    }
+
+    const controller = new AbortController();
+    setAvailableTimeSlots([]);
+    setAvailabilityError(false);
+    setIsLoadingSlots(true);
+    setSelectedTime("");
+
+    getBookingAvailability(
+      apiAppointmentTypes[appointmentId],
+      selectedDate,
+      controller.signal
+    )
+      .then((slots) => {
+        setAvailableTimeSlots(slots);
+      })
+      .catch((error: unknown) => {
+        if (!controller.signal.aborted) {
+          console.error("Unable to load booking availability.", error);
+          setAvailabilityError(true);
+          setSelectedTime("");
+        }
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) {
+          setIsLoadingSlots(false);
+        }
+      });
+
+    return () => controller.abort();
+  }, [appointmentId, selectedDate]);
+
   function changeMonth(offset: number) {
     setMonth((current) => new Date(current.getFullYear(), current.getMonth() + offset, 1));
     setSelectedDate("");
     setSelectedTime("");
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") ?? "").trim();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const firstName = String(formData.get("firstName") ?? "").trim();
+    const lastName = String(formData.get("lastName") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const notes = String(formData.get("notes") ?? "").trim();
 
@@ -102,24 +144,48 @@ export default function BookingPage() {
       return;
     }
 
-    const subject = t("booking.email.subject");
-    const body = [
-      `${t("booking.email.name")}: ${name}`,
-      `${t("booking.labels.email")}: ${email}`,
-      `${t("booking.email.appointmentType")}: ${currentAppointmentCopy.title}`,
-      `${t("booking.labels.duration")}: ${currentAppointment.duration}`,
-      `${t("booking.email.preferredDate")}: ${formattedDate}`,
-      `${t("booking.email.preferredTime")}: ${selectedTime}`,
-      `${t("booking.email.timeZone")}: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`,
-      notes ? `${t("booking.email.notes")}: ${notes}` : "",
-    ]
-      .filter(Boolean)
-      .join("\n");
+    const selectedSlot = availableTimeSlots.find(
+      (slot) => slot.startTime === selectedTime && slot.isAvailable
+    );
+    if (!selectedSlot) {
+      setNotice(t("booking.notices.availabilityLoadError"));
+      return;
+    }
 
-    setNotice(t("booking.notices.emailWillOpen"));
-    window.location.href = `mailto:coaching@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    setIsSubmitting(true);
+    try {
+      const booking = await createBooking({
+        firstName,
+        lastName,
+        email,
+        phone: null,
+        preferredLanguage: language,
+        currentLevel: null,
+        goals: notes || null,
+        message: notes || null,
+        appointmentType: apiAppointmentTypes[appointmentId],
+        appointmentDate: selectedDate,
+        startTime: selectedSlot.startTime,
+        endTime: selectedSlot.endTime,
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        honeypot: "",
+      });
+      setNotice(
+        booking.notificationsSent
+          ? t("booking.notices.bookingSuccess")
+          : t("booking.notices.bookingSavedEmailFailed")
+      );
+      form.reset();
+    } catch (error) {
+      console.error("Unable to submit booking request.", error);
+      setNotice(
+        error instanceof ApiError && error.status === 409
+          ? t("booking.notices.bookingConflict")
+          : t("booking.notices.bookingError")
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -330,26 +396,43 @@ export default function BookingPage() {
                       <p className="mb-4 text-sm font-medium capitalize text-[#23274A]">
                         {formattedDate}
                       </p>
+                      {isLoadingSlots ? (
+                        <p role="status" className="text-sm text-[#626775]">
+                          {t("booking.notices.availabilityLoading")}
+                        </p>
+                      ) : availabilityError ? (
+                        <p role="alert" className="text-sm text-rose-700">
+                          {t("booking.notices.availabilityLoadError")}
+                        </p>
+                      ) : availableTimeSlots.length === 0 ? (
+                        <p className="text-sm text-[#626775]">
+                          {t("booking.notices.noAvailability")}
+                        </p>
+                      ) : (
                       <div className="grid grid-cols-2 gap-3">
                         {availableTimeSlots.map((slot) => (
                           <button
-                            key={slot}
+                            key={slot.startTime}
                             type="button"
-                            aria-pressed={selectedTime === slot}
+                            disabled={!slot.isAvailable}
+                            aria-pressed={selectedTime === slot.startTime}
                             onClick={() => {
-                              setSelectedTime(slot);
+                              setSelectedTime(slot.startTime);
                               setNotice("");
                             }}
                             className={`rounded-lg border px-3 py-2.5 text-sm font-semibold transition ${
-                              selectedTime === slot
+                              selectedTime === slot.startTime
                                 ? "border-[#E6B325] bg-[#E6B325] text-[#23274A]"
-                                : "border-[#e7e9ee] text-[#23274A] hover:border-[#b88712]"
+                                : slot.isAvailable
+                                  ? "border-[#e7e9ee] text-[#23274A] hover:border-[#b88712]"
+                                  : "cursor-not-allowed border-[#e7e9ee] text-[#c4c7ce]"
                             }`}
                           >
-                            {slot}
+                            {slot.startTime}
                           </button>
                         ))}
                       </div>
+                      )}
                       <p className="mt-4 text-xs leading-relaxed text-[#626775]">
                         {t("booking.step3.subjectToConfirmation")}
                       </p>
@@ -376,9 +459,19 @@ export default function BookingPage() {
                   <label className="block text-sm font-medium text-[#23274A]">
                     {t("booking.step4.firstName")}
                     <input
-                      name="name"
+                      name="firstName"
                       type="text"
                       autoComplete="given-name"
+                      required
+                      className="mt-2 block w-full rounded-lg border border-[#d9dce3] px-4 py-3 text-base font-normal text-[#23274A] outline-none transition focus:border-[#112240] focus:ring-2 focus:ring-[#112240]/15"
+                    />
+                  </label>
+                  <label className="block text-sm font-medium text-[#23274A]">
+                    {t("booking.step4.lastName")}
+                    <input
+                      name="lastName"
+                      type="text"
+                      autoComplete="family-name"
                       required
                       className="mt-2 block w-full rounded-lg border border-[#d9dce3] px-4 py-3 text-base font-normal text-[#23274A] outline-none transition focus:border-[#112240] focus:ring-2 focus:ring-[#112240]/15"
                     />
@@ -415,9 +508,10 @@ export default function BookingPage() {
 
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#112240] px-6 py-4 font-semibold text-white transition hover:bg-[#1a3258] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#112240]"
+                disabled={isSubmitting}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#112240] px-6 py-4 font-semibold text-white transition hover:bg-[#1a3258] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#112240] disabled:cursor-wait disabled:opacity-70"
               >
-                {t("booking.submit")}
+                {isSubmitting ? t("booking.notices.availabilityLoading") : t("booking.submit")}
                 <i aria-hidden="true" className="ri-arrow-right-up-line" />
               </button>
               <p className="text-center text-xs leading-relaxed text-[#626775]">

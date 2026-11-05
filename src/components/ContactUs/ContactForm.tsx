@@ -8,6 +8,7 @@ import Input from "../FormHelpers/Input";
 import TextArea from "../FormHelpers/TextArea";
 import Button from "../FormHelpers/Button";
 import { useLanguage } from "@/providers/LanguageProvider";
+import { createContactMessage } from "@/lib/api";
 
 const ContactForm: React.FC = () => {
   const { t } = useLanguage();
@@ -15,7 +16,7 @@ const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<FieldValues>({
     defaultValues: {
       name: "",
@@ -25,9 +26,24 @@ const ContactForm: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    // console.log(data);
-    toast.success(t("contactPage.successMessage"));
-    reset();
+    try {
+      const result = await createContactMessage({
+        name: String(data.name ?? "").trim(),
+        email: String(data.email ?? "").trim(),
+        subject: t("contactPage.formTitle"),
+        message: String(data.comment ?? "").trim(),
+        honeypot: "",
+      });
+      toast.success(
+        result.notificationSent
+          ? t("contactPage.successMessage")
+          : t("contactPage.savedEmailFailed")
+      );
+      reset();
+    } catch (error) {
+      console.error("Unable to submit contact message.", error);
+      toast.error(t("contactPage.errorMessage"));
+    }
   };
 
   return (
@@ -76,6 +92,7 @@ const ContactForm: React.FC = () => {
 
                 <Button
                   label={t("contactPage.submitButton")}
+                  disabled={isSubmitting}
                   classAtts="
                     bg-[#717FF8] 
                     text-[#fff] 

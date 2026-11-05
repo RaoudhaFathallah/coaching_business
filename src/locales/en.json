@@ -39,7 +39,9 @@
     "namePlaceholder": "Your name",
     "messagePlaceholder": "How can I help you?",
     "submitButton": "Send your message",
-    "successMessage": "Your message has been sent successfully."
+    "successMessage": "Your message has been sent successfully.",
+    "errorMessage": "Your message could not be sent. Please try again.",
+    "savedEmailFailed": "Your message was saved, but the email notification could not be sent. Please contact us directly."
   },
   "footer": {
     "tagline": "Personalized coaching to help you move forward with clarity and confidence.",
@@ -69,7 +71,7 @@
       "exploreCoaching": "Explore Coaching",
       "starsLabel": "5 out of 5 stars",
       "support": "Support for your next step",
-      "imageAlt": "Your life coach, ready to listen",
+      "imageAlt": "Professional portrait of your coach",
       "cardSubtitle": "A space to move forward"
     },
     "benefitsLabel": "Coaching benefits",
@@ -92,7 +94,7 @@
       }
     ],
     "about": {
-      "imageAlt": "A coach listening during a one-to-one session",
+      "imageAlt": "Your coach working in a professional office",
       "cardTitle": "A thoughtful space to grow",
       "cardSubtitle": "One conversation at a time",
       "title": "Real progress begins with being heard.",
@@ -220,11 +222,11 @@
       "title": "Coaching that begins with you.",
       "paragraph1": "I believe that meaningful change begins when you have the time and space to hear yourself think. Coaching gives us a chance to pause, get curious, and find a way forward that feels like your own.",
       "paragraph2": "Whether you are navigating a change, feeling stuck, or ready to grow, our conversations focus on what matters to you—not a one-size-fits-all answer.",
-      "imageAlt": "Life coach portrait",
+      "imageAlt": "Professional portrait of your coach",
       "caption": "A thoughtful space to move forward"
     },
     "philosophy": {
-      "imageAlt": "A calm, welcoming coaching space",
+      "imageAlt": "Your coach working in a professional office",
       "cardTitle": "There is no single right way to grow.",
       "cardSubtitle": "We make room for your perspective and your pace.",
       "eyebrow": "My philosophy",
@@ -282,7 +284,7 @@
       "eyebrow": "Find your way forward",
       "title": "Coaching shaped around what matters to you.",
       "description": "There is no one-size-fits-all path. Explore the areas we can work on together, then we’ll shape the conversations around your goals, your circumstances, and your pace.",
-      "imageAlt": "A coaching session",
+      "imageAlt": "Your coach presenting his coaching business",
       "cardSubtitle": "A partnership, not a prescription."
     },
     "programs": {
@@ -370,6 +372,31 @@
     }
   },
   "pricing": {
+    "groupPlan": {
+      "name": "Group Coaching",
+      "description": "A supportive monthly plan with live sessions and guided progression.",
+      "features": [
+        "Initial assessment",
+        "Personalized coaching",
+        "12 live sessions per month",
+        "3 sessions per week",
+        "Maximum 2 learners per group"
+      ]
+    },
+    "privatePlan": {
+      "name": "Private One-on-One Coaching",
+      "description": "An intensive monthly plan for personalized coaching and follow-up.",
+      "features": [
+        "12 individual sessions per month",
+        "Personalized coaching plan",
+        "Written feedback after sessions",
+        "Priority scheduling"
+      ]
+    },
+    "perMonth": "per month",
+    "popular": "Most popular",
+    "loadingPlans": "Loading coaching plans...",
+    "plansLoadError": "Coaching plans could not be loaded. Please try again later.",
     "intro": {
       "eyebrow": "Support that fits",
       "title": "Choose the level of support that feels right.",
@@ -446,7 +473,8 @@
         "answer": "Coaching focuses on reflection, goals, and forward-looking action. It is not a substitute for therapy or medical care. If you need clinical support, please contact a qualified healthcare professional."
       }
     ],
-    "askQuestion": "Ask a question"
+    "askQuestion": "Ask a question",
+    "apiLoadError": "The latest questions could not be loaded. Showing the saved website answers."
   },
   "booking": {
     "title": "Booking",
@@ -467,7 +495,13 @@
     "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     "notices": {
       "chooseDateAndTime": "Please choose a date and time.",
-      "emailWillOpen": "Your email app will open with your request. The booking is confirmed after we reply."
+      "availabilityLoading": "Checking available times...",
+      "availabilityLoadError": "Available times could not be loaded. Please try again later.",
+      "noAvailability": "There are no available times for this date.",
+      "bookingSuccess": "Your booking request was sent. We will confirm the time by email.",
+      "bookingSavedEmailFailed": "Your booking request was saved, but the email could not be sent. Please contact us directly.",
+      "bookingConflict": "This time is no longer available. Please choose another time.",
+      "bookingError": "Your booking request could not be sent. Please try again."
     },
     "email": {
       "subject": "Coaching booking request",
@@ -508,10 +542,11 @@
       "title": "Your information",
       "description": "So we can reply and confirm your time.",
       "firstName": "First name",
+      "lastName": "Last name",
       "notes": "A little about your goals (optional)"
     },
     "submit": "Request this booking",
-    "disclaimer": "Your request is not automatically confirmed. Your email app will open so you can send the details; we’ll then confirm availability.",
+    "disclaimer": "Your request is not automatically confirmed. We’ll confirm availability with you by email.",
     "summary": {
       "title": "Your booking",
       "appointment": "Appointment",

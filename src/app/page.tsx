@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/providers/LanguageProvider";
+import { useCoachingPlans } from "@/hooks/useCoachingPlans";
+import { useLocalizedFaqs } from "@/hooks/useLocalizedFaqs";
 
 // Non-translatable data; order matches the matching lists in the locale files.
 const benefitIcons = [
@@ -77,7 +79,10 @@ function PrimaryButton({
 }
 
 export default function HomePage() {
-  const { t, messages } = useLanguage();
+  const { language, t, messages } = useLanguage();
+  const { plans, isLoading: plansLoading, hasError: plansError } =
+    useCoachingPlans();
+  const { faqs, hasError: faqsError } = useLocalizedFaqs(language);
   const benefits = messages.home.benefits.map((benefit, index) => ({
     ...benefit,
     icon: benefitIcons[index],
@@ -88,8 +93,7 @@ export default function HomePage() {
     image: programImages[index],
   }));
   const steps = messages.home.process.steps;
-  const plans = messages.home.pricing.plans;
-  const questions = messages.home.faq.questions;
+  const questions = faqs ?? messages.home.faq.questions;
 
   return (
     <main>
@@ -130,7 +134,7 @@ export default function HomePage() {
             <div className="absolute -inset-4 rounded-[48%_48%_18px_18px] border border-white/20" />
             <div className="relative mx-auto aspect-[4/5] max-h-[540px] overflow-hidden rounded-[48%_48%_18px_18px] bg-[#dce9e5]">
               <Image
-                src="/images/life-coach/hero-img.png"
+                src="/images/life-coach/Polished Corporate Office Portrait.png"
                 alt={t("home.hero.imageAlt")}
                 fill
                 priority
@@ -169,7 +173,7 @@ export default function HomePage() {
         <div className="container mx-auto grid max-w-[1200px] items-center gap-12 px-5 sm:px-8 md:grid-cols-2 lg:gap-20">
           <div className="relative mx-auto w-full max-w-[540px]">
             <Image
-              src="/images/life-coach/about-me.jpg"
+              src="/images/life-coach/Confident Consultant in Modern Office.png"
               alt={t("home.about.imageAlt")}
               width={1026}
               height={684}
@@ -287,28 +291,37 @@ export default function HomePage() {
             description={t("home.pricing.description")}
           />
           <div className="grid gap-6 md:grid-cols-2">
-            {plans.map((plan, index) => (
+            {plans.map((plan) => {
+              const copy =
+                plan.slug === "group-coaching"
+                  ? messages.pricing.groupPlan
+                  : messages.pricing.privatePlan;
+              const price = new Intl.NumberFormat(
+                language === "fr" ? "fr-FR" : "en-US",
+                { style: "currency", currency: plan.currency, maximumFractionDigits: 0 }
+              ).format(plan.price);
+
+              return (
               <article
-                key={plan.name}
+                key={plan.id}
                 className={`relative rounded-2xl border bg-white p-7 shadow-sm sm:p-9 ${
-                  index === 1 ? "border-[#E6B325] ring-1 ring-[#E6B325]" : "border-[#e7e9ee]"
+                  plan.isPopular ? "border-[#E6B325] ring-1 ring-[#E6B325]" : "border-[#e7e9ee]"
                 }`}
               >
-                {index === 1 && (
+                {plan.isPopular && (
                   <span className="absolute right-5 top-5 rounded-full bg-[#F8F1E1] px-3 py-1 text-xs font-semibold text-[#725408]">
-                    {t("common.moreSupport")}
+                    {t("pricing.popular")}
                   </span>
                 )}
-                <h3 className="mb-2 text-2xl">{plan.name}</h3>
-                <p className="mb-5 text-[#626775]">{plan.description}</p>
+                <h3 className="mb-2 text-2xl">{copy.name}</h3>
+                <p className="mb-5 text-[#626775]">{copy.description}</p>
                 <p className="mb-6 text-sm text-[#626775]">
                   <span className="block text-2xl font-bold text-[#23274A]">
-                    {t("common.customPricing")}
+                    {price} / {t("pricing.perMonth")}
                   </span>
-                  {t("home.pricing.discussedDuringCall")}
                 </p>
                 <ul className="mb-8 space-y-3">
-                  {plan.features.map((feature) => (
+                  {copy.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm text-[#626775]">
                       <i aria-hidden="true" className="ri-check-line mt-0.5 text-lg text-[#b88712]" />
                       {feature}
@@ -317,8 +330,19 @@ export default function HomePage() {
                 </ul>
                 <PrimaryButton>{t("home.pricing.discussPlan")}</PrimaryButton>
               </article>
-            ))}
+              );
+            })}
           </div>
+          {plansLoading && (
+            <p role="status" className="mt-6 text-center text-sm text-[#626775]">
+              {t("pricing.loadingPlans")}
+            </p>
+          )}
+          {plansError && (
+            <p role="status" className="mt-6 text-center text-sm text-[#626775]">
+              {t("pricing.plansLoadError")}
+            </p>
+          )}
         </div>
       </section>
 
@@ -349,6 +373,11 @@ export default function HomePage() {
             eyebrow={t("home.faq.eyebrow")}
             title={t("home.faq.title")}
           />
+          {faqsError && (
+            <p role="status" className="mb-4 text-center text-sm text-[#626775]">
+              {t("faq.apiLoadError")}
+            </p>
+          )}
           <div className="divide-y divide-[#e1e3e8] border-y border-[#e1e3e8]">
             {questions.map((item, index) => (
               <details key={index} className="group py-5">

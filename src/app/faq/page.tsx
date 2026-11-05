@@ -3,10 +3,12 @@
 import Link from "next/link";
 import PageBannerTitle from "@/components/Common/PageBannerTitle";
 import { useLanguage } from "@/providers/LanguageProvider";
+import { useLocalizedFaqs } from "@/hooks/useLocalizedFaqs";
 
 export default function FaqPage() {
-  const { t, messages } = useLanguage();
-  const questions = messages.faq.questions;
+  const { language, t, messages } = useLanguage();
+  const { faqs, hasError } = useLocalizedFaqs(language);
+  const questions = faqs ?? messages.faq.questions;
 
   return (
     <main>
@@ -48,6 +50,11 @@ export default function FaqPage() {
               </details>
             ))}
           </div>
+          {hasError && (
+            <p role="status" className="mt-4 text-center text-sm text-[#626775]">
+              {t("faq.apiLoadError")}
+            </p>
+          )}
           <div className="mt-10 text-center">
             <Link
               href="/contact-us/"

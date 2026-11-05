@@ -32,9 +32,9 @@ export default function CoursesPage() {
         title={t("courses.title")}
         homeText={t("common.home")}
         homeUrl="/"
-        image="/images/life-coach/service1.jpg"
-        image2="/images/life-coach/service2.jpg"
-        image3="/images/life-coach/service3.jpg"
+        image="/images/life-coach/Polished Corporate Office Portrait.png"
+        image2="/images/life-coach/Confident Consultant in Modern Office.png"
+        image3="/images/life-coach/Coaching Business Professional Portfolio Collage.png"
       />
 
       <section className="bg-white px-5 py-16 sm:px-8 md:py-20">
@@ -59,7 +59,7 @@ export default function CoursesPage() {
           </div>
           <div className="relative mx-auto w-full max-w-[500px]">
             <Image
-              src="/images/life-coach/about-me.jpg"
+              src="/images/life-coach/Coaching Business Professional Portfolio Collage.png"
               alt={t("courses.hero.imageAlt")}
               width={800}
               height={600}

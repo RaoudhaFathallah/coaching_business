@@ -39,7 +39,9 @@
     "namePlaceholder": "Votre nom",
     "messagePlaceholder": "Comment puis-je vous aider ?",
     "submitButton": "Envoyer votre message",
-    "successMessage": "Votre message a bien été envoyé."
+    "successMessage": "Votre message a bien été envoyé.",
+    "errorMessage": "Votre message n’a pas pu être envoyé. Veuillez réessayer.",
+    "savedEmailFailed": "Votre message a été enregistré, mais l’e-mail de notification n’a pas pu être envoyé. Veuillez nous contacter directement."
   },
   "footer": {
     "tagline": "Un coaching personnalisé pour avancer avec clarté et confiance.",
@@ -69,7 +71,7 @@
       "exploreCoaching": "Découvrir le coaching",
       "starsLabel": "5 étoiles sur 5",
       "support": "Un accompagnement pour votre prochain pas",
-      "imageAlt": "Votre coach, à votre écoute",
+      "imageAlt": "Portrait professionnel de votre coach",
       "cardSubtitle": "Un espace pour avancer"
     },
     "benefitsLabel": "Les avantages du coaching",
@@ -92,7 +94,7 @@
       }
     ],
     "about": {
-      "imageAlt": "Une coach à l’écoute lors d’un échange individuel",
+      "imageAlt": "Votre coach dans son espace de travail",
       "cardTitle": "Un espace de réflexion et d’évolution",
       "cardSubtitle": "Un échange à la fois",
       "title": "Le progrès commence par une écoute attentive.",
@@ -220,11 +222,11 @@
       "title": "Un coaching qui commence par vous.",
       "paragraph1": "Je crois que le changement véritable commence lorsque vous avez le temps et l’espace pour vous écouter. Le coaching vous invite à faire une pause, à explorer vos envies et à trouver votre propre voie.",
       "paragraph2": "Que vous traversiez un changement, vous sentiez dans une impasse ou souhaitiez évoluer, nos échanges portent sur ce qui compte pour vous, sans réponse toute faite.",
-      "imageAlt": "Portrait de votre coach",
+      "imageAlt": "Portrait professionnel de votre coach",
       "caption": "Un espace de réflexion pour avancer"
     },
     "philosophy": {
-      "imageAlt": "Un espace de coaching calme et accueillant",
+      "imageAlt": "Votre coach dans son espace de travail",
       "cardTitle": "Il n’existe pas une seule façon d’évoluer.",
       "cardSubtitle": "Nous respectons votre point de vue et votre rythme.",
       "eyebrow": "Ma philosophie",
@@ -282,7 +284,7 @@
       "eyebrow": "Trouvez votre voie",
       "title": "Un accompagnement adapté à ce qui compte pour vous.",
       "description": "Il n’existe pas de parcours universel. Découvrez les sujets que nous pouvons explorer ensemble, puis construisons un accompagnement adapté à vos objectifs, votre situation et votre rythme.",
-      "imageAlt": "Une séance de coaching",
+      "imageAlt": "Votre coach présentant son activité",
       "cardSubtitle": "Un partenariat, pas une recette toute faite."
     },
     "programs": {
@@ -370,6 +372,31 @@
     }
   },
   "pricing": {
+    "groupPlan": {
+      "name": "Coaching en groupe",
+      "description": "Une formule mensuelle avec des séances en direct et un accompagnement progressif.",
+      "features": [
+        "Évaluation initiale",
+        "Coaching personnalisé",
+        "12 séances en direct par mois",
+        "3 séances par semaine",
+        "2 apprenants maximum par groupe"
+      ]
+    },
+    "privatePlan": {
+      "name": "Coaching individuel",
+      "description": "Une formule mensuelle intensive avec un accompagnement individuel et un suivi personnalisé.",
+      "features": [
+        "12 séances individuelles par mois",
+        "Plan de coaching personnalisé",
+        "Retour écrit après les séances",
+        "Planification prioritaire"
+      ]
+    },
+    "perMonth": "par mois",
+    "popular": "La plus populaire",
+    "loadingPlans": "Chargement des formules...",
+    "plansLoadError": "Les formules n’ont pas pu être chargées. Veuillez réessayer plus tard.",
     "intro": {
       "eyebrow": "Un accompagnement adapté",
       "title": "Choisissez le niveau de soutien qui vous convient.",
@@ -446,7 +473,8 @@
         "answer": "Le coaching est axé sur la réflexion, les objectifs et les actions à venir. Il ne remplace pas une thérapie ni un suivi médical. Si vous avez besoin d’un accompagnement clinique, veuillez contacter un professionnel de santé qualifié."
       }
     ],
-    "askQuestion": "Poser une question"
+    "askQuestion": "Poser une question",
+    "apiLoadError": "Les dernières questions n’ont pas pu être chargées. Les réponses enregistrées sur le site sont affichées."
   },
   "booking": {
     "title": "Réservation",
@@ -467,7 +495,13 @@
     "weekdays": ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
     "notices": {
       "chooseDateAndTime": "Veuillez choisir une date et un horaire.",
-      "emailWillOpen": "Votre application e-mail va s’ouvrir avec votre demande. La réservation sera confirmée après réponse."
+      "availabilityLoading": "Vérification des horaires disponibles...",
+      "availabilityLoadError": "Les horaires n’ont pas pu être chargés. Veuillez réessayer plus tard.",
+      "noAvailability": "Aucun horaire n’est disponible pour cette date.",
+      "bookingSuccess": "Votre demande de réservation a été envoyée. Nous vous confirmerons l’horaire par e-mail.",
+      "bookingSavedEmailFailed": "Votre demande a été enregistrée, mais l’e-mail n’a pas pu être envoyé. Veuillez nous contacter directement.",
+      "bookingConflict": "Cet horaire n’est plus disponible. Veuillez en choisir un autre.",
+      "bookingError": "Votre demande n’a pas pu être envoyée. Veuillez réessayer."
     },
     "email": {
       "subject": "Demande de réservation de coaching",
@@ -508,10 +542,11 @@
       "title": "Vos coordonnées",
       "description": "Pour vous répondre et confirmer l’horaire.",
       "firstName": "Prénom",
+      "lastName": "Nom",
       "notes": "Quelques mots sur vos objectifs (facultatif)"
     },
     "submit": "Envoyer ma demande de réservation",
-    "disclaimer": "Votre demande n’est pas confirmée automatiquement. Votre application e-mail s’ouvrira pour envoyer les détails, puis nous vous confirmerons la disponibilité.",
+    "disclaimer": "Votre demande n’est pas confirmée automatiquement. Nous vous confirmerons la disponibilité par e-mail.",
     "summary": {
       "title": "Récapitulatif",
       "appointment": "Rendez-vous",

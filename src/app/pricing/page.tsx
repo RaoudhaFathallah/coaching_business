@@ -3,10 +3,11 @@
 import Link from "next/link";
 import PageBannerTitle from "@/components/Common/PageBannerTitle";
 import { useLanguage } from "@/providers/LanguageProvider";
+import { useCoachingPlans } from "@/hooks/useCoachingPlans";
 
 export default function PricingPage() {
-  const { t, messages } = useLanguage();
-  const plans = messages.pricing.plans;
+  const { language, t, messages } = useLanguage();
+  const { plans, isLoading, hasError } = useCoachingPlans();
 
   return (
     <main>
@@ -35,30 +36,37 @@ export default function PricingPage() {
 
       <section id="pricing" className="scroll-mt-24 bg-[#F7F8FA] px-5 py-16 sm:px-8 md:py-24">
         <div className="mx-auto grid max-w-[1000px] gap-6 md:grid-cols-2">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => {
+            const copy =
+              plan.slug === "group-coaching"
+                ? messages.pricing.groupPlan
+                : messages.pricing.privatePlan;
+            const price = new Intl.NumberFormat(
+              language === "fr" ? "fr-FR" : "en-US",
+              { style: "currency", currency: plan.currency, maximumFractionDigits: 0 }
+            ).format(plan.price);
+
+            return (
             <article
-              key={plan.name}
+              key={plan.id}
               className={`relative rounded-2xl border bg-white p-7 shadow-sm sm:p-9 ${
-                index === 1
+                plan.isPopular
                   ? "border-[#E6B325] ring-1 ring-[#E6B325]"
                   : "border-[#e7e9ee]"
               }`}
             >
-              {index === 1 && (
+              {plan.isPopular && (
                 <span className="absolute right-5 top-5 rounded-full bg-[#F8F1E1] px-3 py-1 text-xs font-semibold text-[#725408]">
-                  {t("common.moreSupport")}
+                  {t("pricing.popular")}
                 </span>
               )}
-              <h2 className="mb-3 text-2xl">{plan.name}</h2>
-              <p className="mb-7 min-h-12 text-[#626775]">{plan.description}</p>
+              <h2 className="mb-3 text-2xl">{copy.name}</h2>
+              <p className="mb-7 min-h-12 text-[#626775]">{copy.description}</p>
               <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-[#b88712]">
-                {t("common.customPricing")}
-              </p>
-              <p className="mb-7 text-sm text-[#626775]">
-                {t("pricing.discussedDuringDiscoveryCall")}
+                {price} / {t("pricing.perMonth")}
               </p>
               <ul className="mb-8 space-y-3">
-                {plan.features.map((feature) => (
+                {copy.features.map((feature) => (
                   <li
                     key={feature}
                     className="flex items-start gap-2 text-sm text-[#626775]"
@@ -74,7 +82,7 @@ export default function PricingPage() {
               <Link
                 href="/booking/"
                 className={`inline-flex w-full items-center justify-center gap-2 rounded-md px-6 py-3.5 text-center font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
-                  index === 1
+                  plan.isPopular
                     ? "bg-[#E6B325] text-[#23274A] hover:bg-[#f0c84f] focus-visible:outline-[#E6B325]"
                     : "bg-[#112240] text-white hover:bg-[#263c60] focus-visible:outline-[#112240]"
                 }`}
@@ -83,8 +91,19 @@ export default function PricingPage() {
                 <i aria-hidden="true" className="ri-arrow-right-up-line" />
               </Link>
             </article>
-          ))}
+            );
+          })}
         </div>
+        {isLoading && (
+          <p role="status" className="mx-auto mt-6 text-center text-sm text-[#626775]">
+            {t("pricing.loadingPlans")}
+          </p>
+        )}
+        {hasError && (
+          <p role="status" className="mx-auto mt-6 text-center text-sm text-[#626775]">
+            {t("pricing.plansLoadError")}
+          </p>
+        )}
       </section>
 
       <section className="bg-white px-5 py-16 sm:px-8 md:py-20">
